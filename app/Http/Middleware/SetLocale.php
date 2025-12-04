@@ -3,26 +3,55 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
 class SetLocale
 {
-    public function handle($request, Closure $next)
+    /**
+     * Supported locales
+     */
+    protected array $supportedLocales = ['en', 'ar'];
+
+    /**
+     * Default locale
+     */
+    protected string $defaultLocale = 'ar';
+
+    /**
+     * Handle an incoming request.
+     */
+    public function handle(Request $request, Closure $next)
     {
-        // ياخد أول جزء في الـ URL
+        // Get the first segment of the URL as locale
         $locale = $request->segment(1);
 
-        // لو اللغة مدعومة
-        if (in_array($locale, ['en', 'ar'])) {
-            App::setLocale($locale);         // يغيّر لغة التطبيق
-            Session::put('lang', $locale);   // يحفظ اللغة في session
-        } else {
-            // لو مش مدعومة ممكن تعمل redirect للغة افتراضية
-            $default = 'en';
-            return redirect($default . '/' . $request->path());
+        // If locale is supported, set it
+        if (in_array($locale, $this->supportedLocales)) {
+            App::setLocale($locale);
+            Session::put('lang', $locale);
+            return $next($request);
         }
 
-        return $next($request);
+        // If no locale or unsupported locale, redirect to default locale
+        // Get the current path without the invalid locale prefix
+        $path = $request->path();
+        
+        // If path is just '/' or empty, redirect to default locale home
+        if ($path === '/' || empty($path)) {
+            return redirect($this->defaultLocale);
+        }
+
+        // If path starts with invalid locale, remove it
+        if (in_array($locale, $this->supportedLocales) === false && !empty($locale)) {
+            $segments = $request->segments();
+            array_shift($segments); // Remove first segment (invalid locale)
+            $newPath = implode('/', $segments);
+            return redirect($this->defaultLocale . '/' . $newPath);
+        }
+
+        // No locale prefix, add default locale
+        return redirect($this->defaultLocale . '/' . $path);
     }
 }

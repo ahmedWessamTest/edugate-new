@@ -24,6 +24,7 @@
                 class="inline-flex items-center font-medium justify-center py-2 text-sm text-primary-text-color rounded-lg cursor-pointer"
               >
                 <!-- Flag Icon -->
+                 @if (app()->getLocale() == 'ar')
                 <svg
                   class="rounded-full me-2"
                   height="14"
@@ -36,7 +37,40 @@
                   <path fill="#ce1126" d="M0 0h512v170.7H0z"></path>
                   <path d="M144 256l112-112 112 112-112 112z"></path>
                 </svg>
-
+                @else
+                <svg
+                          aria-hidden="true"
+                          class="h-3.5 w-3.5 rounded-full ms-2"
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="flag-icon-css-us"
+                          viewBox="0 0 512 512"
+                        >
+                          <g fill-rule="evenodd">
+                            <g stroke-width="1pt">
+                              <path
+                                fill="#bd3d44"
+                                d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                transform="scale(3.9385)"
+                              ></path>
+                              <path
+                                fill="#fff"
+                                d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                transform="scale(3.9385)"
+                              ></path>
+                            </g>
+                            <path
+                              fill="#192f5d"
+                              d="M0 0h98.8v70H0z"
+                              transform="scale(3.9385)"
+                            ></path>
+                            <path
+                              fill="#fff"
+                              d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                              transform="scale(3.9385)"
+                            ></path>
+                          </g>
+                        </svg>
+                @endif
                 <!-- Language Text -->
               </button>
               <!-- Dropdown Language -->
@@ -47,11 +81,12 @@
                 <ul class="py-2 font-medium" role="none">
                   <li>
                     <a
-                      href="/en/index.html"
+                      href="{{ LaravelLocalization::getLocalizedURL(app()->getLocale() === 'ar' ? 'en' : 'ar', null, [], true) }}"
                       class="block px-4 py-2 text-sm text-primary-text-color hover:bg-gray-100"
                       role="menuitem"
                     >
                       <div class="inline-flex items-center">
+                        @if (app()->getLocale() == 'ar')
                         <svg
                           aria-hidden="true"
                           class="h-3.5 w-3.5 rounded-full ms-2"
@@ -85,6 +120,21 @@
                           </g>
                         </svg>
                         English (US)
+                        @else
+                        <svg
+                  class="rounded-full me-2"
+                  height="14"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path fill="#006b3f" d="M0 0h512v512H0z"></path>
+                  <path fill="#fff" d="M0 0h512v341.3H0z"></path>
+                  <path fill="#ce1126" d="M0 0h512v170.7H0z"></path>
+                  <path d="M144 256l112-112 112 112-112 112z"></path>
+                </svg>
+                        Arabic (EG)
+                        @endif
                       </div>
                     </a>
                   </li>
