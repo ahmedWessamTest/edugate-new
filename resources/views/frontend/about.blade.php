@@ -300,8 +300,7 @@
         </section>
 
         <!-- ================== Blogs ================== -->
-        <!-- take it from home -->
-        <section class="pb-[200px] pt-10">
+        <section class="pb-[250px] lg:pb-[400px] pt-10">
           <h6
             class="main-title-ui mx-auto mb-20 before:w-[20%] relative after:top-0"
           >

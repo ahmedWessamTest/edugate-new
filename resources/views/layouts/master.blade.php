@@ -106,7 +106,7 @@
   </div>
   <main class="relative z-10">
     <img src="{{asset('assets/images/home/2.svg')}}" role="presentation" height="7440" width="50%"
-      class="main-bg-image h-full w-1/2 object-cover" decoding="async" loading="lazy" />
+      class="main-bg-image h-full w-1/2 object-cover -z-10" decoding="async" loading="lazy" />
     @include('layouts.header')
     @include('layouts.hero')
     @yield('content')

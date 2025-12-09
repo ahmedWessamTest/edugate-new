@@ -75,11 +75,7 @@
                     >معرض الصور</a
                   >
                 </li>
-                <li>
-                  <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >الميديا</a
-                  >
-                </li>
+                
               </ul>
             </div>
 
@@ -100,18 +96,6 @@
                 <li>
                   <a href="#" class="block py-2 text-white hover:text-gray-200"
                     >سياسة الخصوصية</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >الوسائط</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/ar/blogs/"
-                    class="block py-2 text-white hover:text-gray-200"
-                    >المقالات</a
                   >
                 </li>
               </ul>

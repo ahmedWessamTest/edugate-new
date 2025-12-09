@@ -20,4 +20,11 @@ Route::group([
     Route::get('/about', function () {
         return view('frontend.about');
     })->name('about');
+
+    Route::get('/ourServices', function () {
+        return view('frontend.ourServices');
+    })->name('ourServices');
+    Route::get('/subCategory', function () {
+        return view('frontend.subCategory');
+    })->name('subCategory');
 });

@@ -173,8 +173,8 @@
               >
                 <li>
                   <a
-                    href="/ar/index.html"
-                    class="block py-2 px-3 fill-primary-text-color rounded-sm md:bg-transparent md:p-0 nav-link-underline active"
+                    href="{{ route('home') }}"
+                    class="block py-2 px-3 fill-primary-text-color rounded-sm md:bg-transparent md:p-0 nav-link-underline {{ request()->routeIs('home') ? 'active' : '' }}"
                     aria-current="page"
                   >
                     <svg
@@ -191,15 +191,15 @@
                 </li>
                 <li>
                   <a
-                    href="./about-us/index.html"
-                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
+                    href="{{route('about')}}"
+                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('about') ? 'active' : '' }}"
                     >من نحن</a
                   >
                 </li>
                 <li>
                   <a
-                    href="./services/index.html"
-                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
+                    href="{{ route('ourServices') }}"
+                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('ourServices') ? 'active' : '' }}"
                     >خدماتنا</a
                   >
                 </li>
@@ -208,7 +208,7 @@
                 <li class="relative group/menui-1 mb-0">
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
-                    href="./"
+                    href=""
                   >
                     الدراسة في الخارج
                     <svg
@@ -232,28 +232,28 @@
                   >
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >نظرة عامة
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في الامارات</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في الخارج</a
                       >
@@ -287,28 +287,28 @@
                   >
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >نظرة عامة
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في الامارات</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في الخارج</a
                       >
@@ -342,28 +342,28 @@
                   >
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >نظرة عامة
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
                         >الدراسه في الامارات</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300 nav-link-underline"
                         >الدراسه في الخارج</a
                       >
@@ -471,28 +471,28 @@
                   >
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >نظرة عامة
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الامارات
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الخارج
                       </a>
@@ -527,28 +527,28 @@
                   >
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >نظرة عامة
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الامارات
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الخارج
                       </a>
@@ -583,28 +583,28 @@
                   >
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >نظرة عامة
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في مصر
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الامارات
                       </a>
                     </li>
                     <li>
                       <a
-                        href="./sub-category/index.html"
+                        href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
                         >الدراسه في الخارج
                       </a>
