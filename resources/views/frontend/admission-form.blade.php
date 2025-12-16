@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @push('styles')
 <link
       rel="stylesheet"
@@ -50,11 +50,10 @@
                 <h1
                   class="text-alternate-text-color mb-3 text-3xl lg:text-[26px] font-bold leading-relaxed"
                 >
-                  ادرس في الخارج الان...مستقبلك يبدأ بخطوة
+                  {{ __('admission.hero_title') }}
                 </h1>
                 <p class="text-primary-text-color max-w-[660px] mx-auto">
-                  اكتشف فرص الدراسة في ابرز الجامعات العالمية, و احصل علي
-                  استشارات مجانية, دعم كامل في تقديم و متابعة حتي القبول
+                  {{ __('admission.hero_desc') }}
                 </p>
               </div>
               <div
@@ -68,13 +67,13 @@
                       <input
                         type="text"
                         id="nameInput"
-                        placeholder="الاسم"
+                        placeholder="{{ __('admission.name_placeholder') }}"
                         class="main-input preventNumber"
                       />
                       <small
                         id="nameError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >الاسم غير صالح (3 أحرف على الأقل)</small
+                        >{{ __('admission.name_error') }}</small
                       >
                     </div>
 
@@ -83,13 +82,13 @@
                       <input
                         type="email"
                         id="emailInput"
-                        placeholder="البريد الالكتروني"
+                        placeholder="{{ __('admission.email_placeholder') }}"
                         class="main-input"
                       />
                       <small
                         id="emailError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >البريد الالكتروني غير صالح</small
+                        >{{ __('admission.email_error') }}</small
                       >
                     </div>
 
@@ -98,13 +97,13 @@
                       <input
                         type="tel"
                         id="phoneInput"
-                        placeholder="رقم الهاتف"
+                        placeholder="{{ __('admission.phone_placeholder') }}"
                         class="main-input"
                       />
                       <small
                         id="phoneError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >رقم الهاتف غير صالح</small
+                        >{{ __('admission.phone_error') }}</small
                       >
                       <input
                         type="text"
@@ -119,13 +118,13 @@
                       <input
                         type="text"
                         id="nationalityInput"
-                        placeholder="ما هي جنسيتك"
+                        placeholder="{{ __('admission.nationality_placeholder') }}"
                         class="main-input preventNumber"
                       />
                       <small
                         id="nationalityError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >الجنسية مطلوبة</small
+                        >{{ __('admission.nationality_error') }}</small
                       >
                     </div>
 
@@ -136,10 +135,10 @@
                           id="country"
                           class="main-input appearance-none  "
                         >
-                          <option selected >اختر دولتك </option>
-                          <option value="bachelor">مصر</option>
-                          <option value="master">الامارات</option>
-                          <option value="doctorate">الولايات المتحده</option>
+                          <option selected >{{ __('admission.country_select') }} </option>
+                          <option value="bachelor">{{ __('admission.country_egypt') }}</option>
+                          <option value="master">{{ __('admission.country_uae') }}</option>
+                          <option value="doctorate">{{ __('admission.country_usa') }}</option>
                         </select>
                         <span
                           class="absolute end-3 top-1/2 fill-primary-text-color -translate-y-1/2"
@@ -159,7 +158,7 @@
                       <small
                         id="countryError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >اختر نوع الدوله</small
+                        >{{ __('admission.country_error') }}</small
                       >
                     </div>
                     <!-- Study Type -->
@@ -169,10 +168,10 @@
                           id="studyType"
                           class="main-input appearance-none "
                         >
-                          <option selected>اختر نوع الدراسة</option>
-                          <option value="bachelor">بكالوريوس</option>
-                          <option value="master">ماجستير</option>
-                          <option value="doctorate">دكتوراه</option>
+                          <option selected>{{ __('admission.study_type_select') }}</option>
+                          <option value="bachelor">{{ __('admission.study_type_bachelor') }}</option>
+                          <option value="master">{{ __('admission.study_type_master') }}</option>
+                          <option value="doctorate">{{ __('admission.study_type_doctorate') }}</option>
                         </select>
                         <span
                           class="absolute end-3 top-1/2 fill-primary-text-color -translate-y-1/2"
@@ -192,7 +191,7 @@
                       <small
                         id="studyTypeError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >اختر نوع الدراسة</small
+                        >{{ __('admission.study_type_error') }}</small
                       >
                     </div>
 
@@ -204,26 +203,26 @@
                             <input
                               type="text"
                               id="academicBifurcationInput"
-                              placeholder="التشعيب الدراسي"
+                              placeholder="{{ __('admission.bifurcation_placeholder') }}"
                               class="main-input"
                             />
                             <small
                               id="academicBifurcationError"
                               class="text-red-500 text-sm opacity-0 transition-opacity"
-                              >التشعيب مطلوب</small
+                              >{{ __('admission.bifurcation_error') }}</small
                             >
                           </div>
                           <div>
                             <input
                               type="text"
                               id="academicAverageInput"
-                              placeholder="المعدل الدراسي"
+                              placeholder="{{ __('admission.average_placeholder') }}"
                               class="main-input"
                             />
                             <small
                               id="academicAverageError"
                               class="text-red-500 text-sm opacity-0 transition-opacity"
-                              >المعدل مطلوب</small
+                              >{{ __('admission.average_error') }}</small
                             >
                           </div>
                         </div>
@@ -233,13 +232,13 @@
                          <input
                            type="text"
                            id="BachelorsDegreeMajorInput"
-                           placeholder="تخصص البكالوريوس"
+                           placeholder="{{ __('admission.bachelor_major_placeholder') }}"
                            class="main-input"
                          />
                          <small
                            id="BachelorsDegreeMajorError"
                            class="text-red-500 text-sm opacity-0 transition-opacity"
-                           >تخصص البكالوريوس مطلوب</small
+                           >{{ __('admission.bachelor_major_error') }}</small
                          >
                        </div>
    
@@ -249,13 +248,13 @@
                             <input
                               type="text"
                               id="mastersDegreeMajorInput"
-                              placeholder="تخصص الماجستير"
+                              placeholder="{{ __('admission.master_major_placeholder') }}"
                               class="main-input"
                             />
                             <small
                               id="mastersDegreeMajorError"
                               class="text-red-500 text-sm opacity-0 transition-opacity"
-                              >تخصص الماجستير مطلوب</small
+                              >{{ __('admission.master_major_error') }}</small
                             >
                           </div>
     <div>
@@ -263,13 +262,13 @@
       <input
         type="text"
         id="requiredSpecializationInput"
-        placeholder="تخصص الدكتوراه"
+        placeholder="{{ __('admission.doctorate_major_placeholder') }}"
         class="main-input"
       />
       <small
         id="requiredSpecializationError"
         class="text-red-500 text-sm opacity-0 transition-opacity"
-        >تخصص الدكتوراه مطلوب</small
+        >{{ __('admission.doctorate_major_error') }}</small
       >
     </div>
                         </div>
@@ -279,13 +278,13 @@
                       <input
                         type="text"
                         id="AcademicSpecializationInput"
-                        placeholder="التخصص الدراسي"
+                        placeholder="{{ __('admission.desired_specialization_placeholder') }}"
                         class="main-input"
                       />
                       <small
                         id="AcademicSpecializationError"
                         class="text-red-500 text-sm opacity-0 transition-opacity"
-                        >التخصص الدراسي مطلوب</small
+                        >{{ __('admission.desired_specialization_error') }}</small
                       >
                     </div>
 
@@ -295,7 +294,7 @@
                         type="submit"
                         class="px-8 py-3 bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold text-description rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer"
                       >
-                        إرسال
+                        {{ __('admission.submit_btn') }}
                       </button>
                     </div>
                   </div>

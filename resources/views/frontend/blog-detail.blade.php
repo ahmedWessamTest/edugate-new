@@ -1,5 +1,7 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
+@section('hero_title', __('blog.education_abroad'))
+@section('hero_description', __('blog.education_abroad'))
 @push('styles')
   <link rel="stylesheet" href="{{asset('assets/style/text-editor.css')}}" />
   <link
@@ -1878,7 +1880,7 @@
                 <div
                   class="top-24 tableOfContents hidden xl:block overflow-y-auto mb-5 bg-white/60 backdrop-blur-md border-s-4 border-main-green rounded-2xl shadow-md p-5 transition-all duration-300 hover:shadow-lg"
                 >
-                <h3 class="text-primary-text-color font-bold mb-4 text-lg tracking-wide border-b pb-2 border-gray-200">محتوي الصفحه</h3>
+                <h3 class="text-primary-text-color font-bold mb-4 text-lg tracking-wide border-b pb-2 border-gray-200">{{ __('blog.table_of_contents') }}</h3>
                 <ul class="space-y-2 text-sm text-alternate-text-color overflow-y-auto max-h-[300px] custom-scrollbar"></ul></div>
                 <form
                   data-validate="true"
@@ -1889,18 +1891,12 @@
                     <h3
                       class="text-primary-text-color text-[22px] lg:text-[26px] font-bold mb-4 leading-relaxed"
                     >
-                      "لا تتأخر، تواصل، واستثمر، وابدأ"
+                      {{ __('blog.form_title') }}
                     </h3>
                     <p
                       class="text-alternate-text-color text-[14px] lg:text-[16px] leading-relaxed"
                     >
-                      "فريقنا جاهز يرد على استفساراتك بوجودك،<br />
-                      ويساعدك تبدأ خطواتك الأكاديمية بثقة.<br />
-                    </p>
-                    <p
-                      class="text-alternate-text-color lg:text-[16px] font-medium leading-relaxed"
-                    >
-                      تواصل معنا الآن ونخلِّينا نكون جزء من رحلتك!"
+                      {{ __('blog.form_desc') }}
                     </p>
                   </div>
 
@@ -1910,7 +1906,7 @@
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="الاسم"
+                      placeholder="{{ __('blog.placeholder_name') }}"
                       class="main-input preventNumber"
                     />
                   </div>
@@ -1921,7 +1917,7 @@
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="البريد الإلكتروني"
+                      placeholder="{{ __('blog.placeholder_email') }}"
                       class="main-input"
                     />
                   </div>
@@ -1932,7 +1928,7 @@
                       type="tel"
                       id="phone"
                       name="phone"
-                      placeholder="رقم الهاتف"
+                      placeholder="{{ __('blog.placeholder_phone') }}"
                       class="main-input"
                     />
                     <input
@@ -1949,7 +1945,7 @@
                       id="message"
                       name="message"
                       rows="6"
-                      placeholder="اكتب رسالتك هنا ..."
+                      placeholder="{{ __('blog.placeholder_message') }}"
                       class="main-input resize-none"
                     ></textarea>
                   </div>
@@ -1960,7 +1956,7 @@
                       type="submit"
                       class="px-12 py-3 bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold text-[18px] rounded-[25px] transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer"
                     >
-                      إرسال
+                      {{ __('blog.submit_button') }}
                     </button>
                   </div>
                 </form>
@@ -1991,7 +1987,7 @@
             <h6
               class="main-title-ui mx-auto mb-20 before:left-0 before:w-[20%] relative after:absolute after:left-0 after:-translate-x-[65%] after:translate-y-[-20%] after:top-0 after:w-10 after:h-10 after:bg-[url('../../assets/images/related-blogs/realated-img.svg')] after:hidden lg:after:block after:bg-no-repeat after:bg-contain after:bg-center"
             >
-              مقالات ذات صله
+              {{ __('blog.related_articles') }}
             </h6>
 
             <div
@@ -2017,7 +2013,7 @@
                     src="{{asset('assets/images/related-blogs/plus.svg')}}"
                     alt="" />
                   <span class="block text-primary-text-color font-light">
-                    القطاع الطبي</
+                    {{ __('blog.medical_sector') }}</
                   >
                 </div>
               </div>

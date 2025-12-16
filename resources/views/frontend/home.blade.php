@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('content')
   <!-- ================== Our Services Section ================== -->
   <div class="service relative overflow-hidden pt-5 pb-20 [content-visibility:auto]">
@@ -19,11 +19,10 @@
             <div class="relative w-fit">
               <img src="{{asset('assets/images/home/services/decorative.svg')}}" role="presentation"
                 class="absolute top-0 start-0 -translate-y-full" loading="lazy" decoding="async" width="48" height="48" />
-              <h3 class="main-title-ui">خدماتنا</h3>
+              <h3 class="main-title-ui">{{ __('home.services_title') }}</h3>
             </div>
             <div class="text-description text-alternate-text-color max-w-[80%] overflow-y-auto" style="max-height: 100px">
-              نقدم لك مجموعة متكاملة من الخدمات التعليمية المصممة خصيصاً
-              لتناسب احتياجاتك الأكاديمية والمهنية. وتشمل:
+              {{ __('home.services_desc') }}
             </div>
           </div>
         </div>
@@ -37,13 +36,12 @@
                       loading="lazy" decoding="async" class="h-[50]" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
-                    التقديم على الجامعات العالمية
+                    {{ __('home.service_universities') }}
                   </p>
                   <div
                     class="inner w-[98%] border-alternate-text-color text-alternate-text-color text-description border-2 p-3 rounded-xl">
                     <div class="overflow-y-auto custom-scrollbar" style="height: 85px">
-                      دعم كامل في تجهيز الملفات، كتابة الخطابات، و التقديم
-                      على أرقى الجامعات
+                      {{ __('home.service_universities_desc') }}
                     </div>
                   </div>
                 </div>
@@ -55,13 +53,12 @@
                       height="56" loading="lazy" decoding="async" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
-                    قبولات اللغة
+                    {{ __('home.service_language') }}
                   </p>
                   <div
                     class="inner w-[98%] border-alternate-text-color text-alternate-text-color text-description border-2 p-3 rounded-xl">
                     <div class="overflow-y-auto custom-scrollbar" style="height: 85px">
-                      تحسين المهارات في مجالات متنوعة كاللغة، الترجمة،
-                      وريادة الأعمال
+                      {{ __('home.service_language_desc') }}
                     </div>
                   </div>
                 </div>
@@ -73,12 +70,11 @@
                       width="40" height="53" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
-                    استشارات أكاديمية مخصصة
+                    {{ __('home.service_consultation') }}
                   </p>
                   <div class="inner w-[98%] text-alternate-text-color text-description border-2 p-3 rounded-xl">
                     <div class="overflow-y-auto custom-scrollbar" style="height: 85px">
-                      نساعدك في اختيار التخصص و الجامعة المناسبة لمهاراتك و
-                      طموحاتك
+                      {{ __('home.service_consultation_desc') }}
                     </div>
                   </div>
                 </div>
@@ -90,15 +86,13 @@
                       loading="lazy" decoding="async" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
-                    قبولات اللغة
+                    {{ __('home.service_language') }}
                   </p>
                   <div class="overflow-y-auto custom-scrollbar"></div>
                   <div
                     class="inner w-[98%] border-alternate-text-color text-alternate-text-color text-description border-2 p-3 rounded-xl">
                     <div class="overflow-y-auto custom-scrollbar" style="height: 85px">
-                      نساعدك في اختيار التخصص و الجامعة المناسبة لمهاراتك و
-                      طموحاتك نساعدك في اختيار التخصص و الجامعة المناسبة
-                      لمهاراتك و طموحاتك
+                      {{ __('home.service_consultation_desc') }}
                     </div>
                   </div>
                 </div>
@@ -153,7 +147,7 @@
               660
             </h3>
             <p id="Free-consultations" class="text-white text-[14px]">
-              استشارات مجانية ودعم
+              {{ __('home.stats_consultations') }}
             </p>
           </div>
           <!-- Divider: vertical on desktop, horizontal on mobile -->
@@ -168,7 +162,7 @@
               1500
             </h3>
             <p id="students-who" class="text-white text-[14px]">
-              طالب تم التحاقهم
+              {{ __('home.stats_students') }}
             </p>
           </div>
           <!-- Divider: vertical on desktop, horizontal on mobile -->
@@ -183,7 +177,7 @@
               3
             </h3>
             <p id="different-nationalities" class="text-white text-[14px]">
-              جنسيات مختلفة
+              {{ __('home.stats_nationalities') }}
             </p>
           </div>
           <!-- Divider: vertical on desktop, horizontal on mobile -->
@@ -198,7 +192,7 @@
               60
             </h3>
             <p id="accredited-university" class="text-white text-[14px]">
-              جامعة معتمدة
+              {{ __('home.stats_universities') }}
             </p>
           </div>
         </div>
@@ -215,10 +209,10 @@
       <div class="grid grid-cols-12">
         <div class="col-span-12 lg:col-span-6 content-center">
           <div class="content">
-            <h4 class="main-title-ui before:hidden">ليه تختارنا؟</h4>
+            <h4 class="main-title-ui before:hidden">{{ __('home.why_us_title') }}</h4>
             <p
               class="text-description main-title-ui before:w-[25%] before:rounded-2xl w-fit text-alternate-text-color pb-3">
-              لأن مستقبلك يستاهل الأفضل
+              {{ __('home.why_us_subtitle') }}
             </p>
           </div>
         </div>
@@ -229,18 +223,18 @@
               <div
                 class="option py-10 h-full bg-primary-text-color px-2 lg:py-2 flex items-center justify-center rounded-[25px] border-transparent">
                 <p class="text-white line-clamp-2">
-                  تجهيز احترافي لكل المستندات .
+                  {{ __('home.why_us_1') }}
                 </p>
               </div>
               <div
                 class="option py-10 h-full lg:-mt-7 bg-active-color px-2 lg:py-2 rounded-[25px] flex items-center justify-center border-3 border-white">
                 <p class="text-white line-clamp-2">
-                  شبكة عالمية من الشركاء الأكاديميين .
+                  {{ __('home.why_us_2') }}
                 </p>
               </div>
               <div
                 class="option py-10 h-full lg:-mt-7 bg-primary-text-color px-2 lg:py-2 rounded-[25px] flex items-center justify-center border-3 border-white">
-                <p class="text-white line-clamp-2">دعم قوي مستمر وفعال</p>
+                <p class="text-white line-clamp-2">{{ __('home.why_us_3') }}</p>
               </div>
             </div>
 
@@ -282,24 +276,14 @@
                 <div class="swiper-slide">
                   <div class="flex flex-col h-full">
                     <p class="text-description text-alternate-text-color mb-6 max-h-[150px] overflow-y-auto">
-                      موقع مميز جدا و بيعطي فرص هائلة للطلاب و الحصول علي
-                      الدعم الكامل في تخصص بيوفر لهم الجامعات المستهدفة بشكل و
-                      حجم مختلف بيعبر عن خبرة بهذه الصدد و الحماس فنحن نؤمن ان
-                      كل طالب سيشكل الحكم موقع مميز جدا و بيعطي فرص هائلة
-                      للطلاب و الحصول علي الدعم الكامل في تخصص بيوفر لهم
-                      الجامعات المستهدفة بشكل و حجم مختلف بيعبر عن خبرة بهذه
-                      الصدد و الحماس فنحن نؤمن ان كل طالب سيشكل الحكم موقع
-                      مميز جدا و بيعطي فرص هائلة للطلاب و الحصول علي الدعم
-                      الكامل في تخصص بيوفر لهم الجامعات المستهدفة بشكل و حجم
-                      مختلف بيعبر عن خبرة بهذه الصدد و الحماس فنحن نؤمن ان كل
-                      طالب سيشكل الحكم
+                      {{ __('home.testimonial_text_sample') }}
                     </p>
                     <div class="mt-auto flex gap-5 items-center justify-end">
                       <div>
                         <p class="font-bold text-primary-text-color">
                           محمد أحمد
                         </p>
-                        <p class="text-gray-500">طالب</p>
+                        <p class="text-gray-500">{{ __('home.testimonial_role') }}</p>
                       </div>
                       <div class="w-12 h-12 rounded-full overflow-hidden ml-4">
                         <img src="{{asset('assets/images/home/whyus/whyus.png')}}" alt="محمد أحمد"
@@ -344,14 +328,9 @@
 
           <!-- Content -->
           <div class="relative z-20 px-5 py-15 md:ps-15 md:pe-25 h-full flex flex-col justify-center">
-            <h5 class="text-white main-title-ui before:bg-white">الاراء</h5>
+            <h5 class="text-white main-title-ui before:bg-white">{{ __('home.testimonials_title') }}</h5>
             <p class="text-white mb-6 text-description text-justify lg:max-h-[210px] lg:overflow-y-auto">
-              نخبة من الاستشاريين الأكاديميين و خبراء التعليم الدوليين
-              المعتمدين، متخصصين في مجال خدمات التعليم الدولي و الدراسة في
-              الخارج، التسويق التعليمي و تسويق البرامج التعليمية، إدارة
-              القبولات الجامعية، و تأمين القبولات المعتمدة في الجامعات
-              الموصى بها دوليا و المصنفة عالميا. و تعتبر إديوجيت من أهم
-              الشركات التي ساهمت في دعم طلاب الوطن العربي و طلاب الخليج.
+              {{ __('home.testimonials_desc') }}
             </p>
           </div>
         </div>
@@ -379,22 +358,22 @@
           <!-- Centered Text -->
           <div class="top flex-1 flex flex-col justify-center items-center text-center">
             <p class="text-[25px] font-medium md:line-clamp-1 mb-3">
-              مستعد لاتخاذ الخطوه الاول نحو الالتحاق
+              {{ __('home.banner_title_1') }}
             </p>
             <p class="text-main-title font-bold md:line-clamp-1">
-              بافضل الجامعات المعتمده
+              {{ __('home.banner_title_2') }}
             </p>
           </div>
 
           <!-- Bottom Line -->
           <div class="line mb-1 text-start">
             <p class="text-white font-light">
-              تواصل معانا الان لتحديد موعد استشاره ومعرفه المزيد عنا
+              {{ __('home.banner_desc') }}
             </p>
           </div>
           <div class="flex items-center justify-center gap-2 text-white">
             <div class="grow h-px bg-white"></div>
-            <span class="w-fit px-2 whitespace-nowrap font-light">ابدا معنا الان</span>
+            <span class="w-fit px-2 whitespace-nowrap font-light">{{ __('home.banner_cta') }}</span>
           </div>
         </div>
       </div>
@@ -410,7 +389,7 @@
     <h6 class="main-title-ui mx-auto mb-20 before:left-0 before:w-[20%] relative after:top-0">
       <img src="{{asset('assets/images/home/blogs/pin.svg')}}" role="presentation" loading="lazy" decoding="async"
         class="absolute start-0 translate-x-[65%] w-10 h-10 ltr:-translate-x-[65%] translate-y-[-20%]" />
-      بعض المقالات الهامه
+      {{ __('home.blogs_title') }}
     </h6>
 
     <div class="container px-5 relative z-10">
@@ -440,7 +419,7 @@
                   الخارج
                 </p>
                 <span class="block text-primary-text-color mb-2 font-light">
-                  المزيد ...</span>
+                  {{ __('home.read_more') }}</span>
               </div>
             </a>
           </article>

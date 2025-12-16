@@ -1,6 +1,7 @@
 @extends("layouts.master")
-@section('title', 'Home')
-
+@section('hero_title', __('subCategory.title'))
+@section('hero_description', __('subCategory.sub_title'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('content')
 
 <section class="container pb-[100px] pt-[100px] relative">

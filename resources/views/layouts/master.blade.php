@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="إدوجيت - بوابتك للتعليم الدولي. نقدم استشارات أكاديمية، قبولات جامعية، وخدمات التعليم في الخارج" />
+    content="{{ __('general.meta_description') }}" />
   <meta name="theme-color" content="#1CB280" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <title>بواباتك للتعليم الدولي - Edugate</title>
+  <title>{{ __('general.site_title') }}</title>
   <!-- LCP preload -->
    @if (request()->route()->getName() == 'home')
    <link rel="preload" as="image" href="{{asset('assets/images/home/1.svg')}}" fetchpriority="high" />
@@ -94,8 +94,8 @@
         </div>
       </div>
       <div class="loader-text">
-        <h2>مرحبًا بك في إدوجيت</h2>
-        <p>جاري تحميل رحلتك التعليمية...</p>
+        <h2>{{ __('general.loader_title') }}</h2>
+        <p>{{ __('general.loader_text') }}</p>
       </div>
       <div class="loader-spinner">
         <div class="spinner-dot"></div>

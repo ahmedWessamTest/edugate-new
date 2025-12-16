@@ -1,5 +1,6 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_title', __('gallery.winter_exhibitions'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('content')
 <section class="pb-44 pt-8 relative z-10">
         <!-- Slider main container -->
@@ -15,7 +16,7 @@
                     class="tab-btn text-xl text-white bg-[#cfcfcf] hover:bg-[#cfcfcf]/80 transition-colors duration-300 cursor-pointer font-medium rounded-full px-7 py-2.5"
                     data-target="winterExhibition"
                   >
-                    معارض الشتاء
+                    {{ __('gallery.winter_exhibitions') }}
                   </button>
                 </div>
                 <div class="swiper-slide">
@@ -24,7 +25,7 @@
                     class="tab-btn text-xl text-white bg-[#cfcfcf] hover:bg-[#cfcfcf]/80 transition-colors duration-300 cursor-pointer font-medium rounded-full px-7 py-2.5"
                     data-target="winterExhibition"
                   >
-                    معارض الشتاء
+                    {{ __('gallery.winter_exhibitions') }}
                   </button>
                 </div>
 
@@ -34,7 +35,7 @@
                     class="tab-btn text-xl text-white bg-[#cfcfcf] hover:bg-[#cfcfcf]/80 transition-colors duration-300 cursor-pointer font-medium rounded-full px-7 py-2.5"
                     data-target="internationalExhibitions"
                   >
-                    المعارض العالمية
+                    {{ __('gallery.international_exhibitions') }}
                   </button>
                 </div>
 
@@ -44,7 +45,7 @@
                     class="tab-btn text-xl text-white bg-[#cfcfcf] hover:bg-[#cfcfcf]/80 transition-colors duration-300 cursor-pointer font-medium rounded-full px-7 py-2.5"
                     data-target="summerFairs"
                   >
-                    معارض الصيف
+                    {{ __('gallery.summer_fairs') }}
                   </button>
                 </div>
               </div>
@@ -132,11 +133,10 @@
         <div id="tabs-cache" class="hidden">
           <div id="winterExhibition">
             <h3 class="text-2xl lg:text-4xl text-primary-text-color font-bold">
-              من قلب الحدث لقطات من معرضنا الاقليميه
+              {{ __('gallery.winter_content_title') }}
             </h3>
             <p class="text-alternate-text-color max-w-2xl  font-medium my-4 text-lg lg:text-xl">
-              نأخذك بجولة مصورة داخل احدث معارضنا التعليميه حول العال حيث تلتقي
-              الجامعات بالطلاب و تبني الفرص و تصنع الفرارات
+              {{ __('gallery.winter_content_desc') }}
             </p>
             <div class="swiper gallery-swiper rounded-[50px] overflow-hidden" >
               <div class="swiper-wrapper [&_img]:aspect-square h-[500px]! lg:h-[700]! xl:h-[900px]!">
@@ -197,13 +197,13 @@
           </div>
 
           <div id="internationalExhibitions">
-            <h3>المعارض العالمية</h3>
-            <p>هذا هو محتوى المعارض العالمية.</p>
+            <h3>{{ __('gallery.international_exhibitions') }}</h3>
+            <p>{{ __('gallery.international_content_placeholder') }}</p>
           </div>
 
           <div id="summerFairs">
-            <h3>معارض الصيف</h3>
-            <p>هذا هو محتوى معارض الصيف.</p>
+            <h3>{{ __('gallery.summer_fairs') }}</h3>
+            <p>{{ __('gallery.summer_content_placeholder') }}</p>
           </div>
         </div>
 

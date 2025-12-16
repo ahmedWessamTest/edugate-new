@@ -1,5 +1,7 @@
 @extends("layouts.master")
-@section('title', 'subCategory')
+@section('hero_title', __('subCategory.title'))
+@section('hero_description', __('subCategory.description'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('content')
 @push('styles')
 <link rel="stylesheet" href="{{asset('assets/style/syb-category-editor.css')}}">
@@ -1859,7 +1861,7 @@
               decoding="async"
               class="absolute start-0 translate-x-[65%] w-10 h-10 ltr:-translate-x-[65%] translate-y-[-20%]"
             />
-            بعض المقالات الهامه
+            {{ __('blog.important_articles') }}
           </h6>
 
           <div class="container px-5 relative z-10">
@@ -1889,19 +1891,18 @@
             </div>
             <div class="content bg-white py-4 px-3">
               <h4
-                title=" التعليم في الخارج"
+                title="{{ __('blog.education_abroad') }}"
                 class="text-primary-text-color text-sub-title mb-4 block font-medium line-clamp-1"
               >
-                التعليم في الخارج
+                {{ __('blog.education_abroad') }}
               </h4>
-              <p class="line-clamp-2 text-sm text-alternate-text-color mb-2" title=" اصبح الكثير من طلاب الدول العربية يرغبون في الدراسة في الخارج">
-                اصبح الكثير من طلاب الدول العربية يرغبون في الدراسة في الخارج
+              <p class="line-clamp-2 text-sm text-alternate-text-color mb-2" title="{{ __('blog.education_abroad_desc') }}">
+                {{ __('blog.education_abroad_desc') }}
               </p>
               <span
                 class="block text-primary-text-color mb-2 font-light"
               >
-                المزيد ...</
-              >
+                {{ __('home.read_more') }}</span>
             </div>
           </a>
         </article>

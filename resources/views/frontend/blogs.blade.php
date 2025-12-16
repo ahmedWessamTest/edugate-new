@@ -1,5 +1,8 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_title', __('subCategory.title'))
+@section('hero_description', __('subCategory.description'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
+
 @section('content')
 <section class="pb-56 pt-[100px] relative">
         <div class="container px-5 relative z-10">
@@ -39,8 +42,7 @@
                 <span
                   class="block text-primary-text-color mb-2 font-light"
                 >
-                  المزيد ...</
-                >
+                  {{ __('home.read_more') }}</span>
               </div>
             </a>
           </article>
@@ -363,7 +365,7 @@
     <!-- Previous Button -->
     <a href="#" 
        class="px-3 py-2 rounded-md text-sm font-medium text-alternate-text-color hover:text-primary-text-color hover:bg-gray-100 transition-colors duration-200">
-       Previous
+       {{ __('blog.pagination_previous') }}
     </a>
     
     <!-- Page Numbers -->
@@ -399,13 +401,13 @@
     <!-- Next Button -->
     <a href="#" 
        class="px-3 py-2 rounded-md text-sm font-medium text-alternate-text-color hover:text-primary-text-color hover:bg-gray-100 transition-colors duration-200">
-      Next 
+      {{ __('blog.pagination_next') }} 
     </a>
   </div>
   
   <!-- Optional: Page Info -->
   <p class="mt-4 text-sm text-alternate-text-color">
-    Page 3 of 10
+    {{ __('blog.page_info', ['current' => 3, 'total' => 10]) }}
   </p>
 </div>
           

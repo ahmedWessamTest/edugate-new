@@ -20,7 +20,7 @@
               <button
                 type="button"
                 data-dropdown-toggle="language-dropdown-menu"
-                aria-label="change language"
+                aria-label="{{ __('general.aria_change_language') }}"
                 class="inline-flex items-center font-medium justify-center py-2 text-sm text-primary-text-color rounded-lg cursor-pointer"
               >
                 <!-- Flag Icon -->
@@ -119,7 +119,7 @@
                             ></path>
                           </g>
                         </svg>
-                        English (US)
+                        {{ __('general.lang_english_us') }}
                         @else
                         <svg
                   class="rounded-full me-2"
@@ -133,7 +133,7 @@
                   <path fill="#ce1126" d="M0 0h512v170.7H0z"></path>
                   <path d="M144 256l112-112 112 112-112 112z"></path>
                 </svg>
-                        Arabic (EG)
+                        {{ __('general.lang_arabic_eg') }}
                         @endif
                       </div>
                     </a>
@@ -146,7 +146,7 @@
                 id="mobile-menu-btn"
                 class="inline-flex items-center p-2 w-10 h-10 bg-active-color justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 [@media(min-width:1250px)]:hidden"
               >
-                <span class="sr-only">Open main menu</span>
+                <span class="sr-only">{{ __('general.aria_open_menu') }}</span>
                 <svg
                   class="w-5 h-5 text-white"
                   aria-hidden="true"
@@ -178,7 +178,7 @@
                     aria-current="page"
                   >
                     <svg
-                      aria-label="Home"
+                      aria-label="{{ __('general.aria_home') }}"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       width="20"
@@ -193,14 +193,14 @@
                   <a
                     href="{{route('about')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('about') ? 'active' : '' }}"
-                    >من نحن</a
+                    >{{ __('general.nav_about') }}</a
                   >
                 </li>
                 <li>
                   <a
                     href="{{ route('services') }}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('services') ? 'active' : '' }}"
-                    >خدماتنا</a
+                    >{{ __('general.nav_services') }}</a
                   >
                 </li>
 
@@ -210,7 +210,7 @@
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                     href=""
                   >
-                    الدراسة في الخارج
+                    {{ __('general.nav_study_abroad') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -234,28 +234,28 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في الامارات</a
+                        >{{ __('general.dropdown_study_uae') }}</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في الخارج</a
+                        >{{ __('general.dropdown_study_abroad') }}</a
                       >
                     </li>
                   </ul>
@@ -265,7 +265,7 @@
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                   >
-                    القطاعات التعليميه
+                    {{ __('general.nav_educational_sectors') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -289,28 +289,28 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في الامارات</a
+                        >{{ __('general.dropdown_study_uae') }}</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في الخارج</a
+                        >{{ __('general.dropdown_study_abroad') }}</a
                       >
                     </li>
                   </ul>
@@ -320,7 +320,7 @@
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                   >
-                    التعليم حسب الجنسية
+                    {{ __('general.nav_education_by_nationality') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -344,28 +344,28 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300"
-                        >الدراسه في الامارات</a
+                        >{{ __('general.dropdown_study_uae') }}</a
                       >
                     </li>
                     <li class="hover:bg-gray-100 transition-all duration-300">
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2 hover:text-primary-text-color transition-all duration-300 nav-link-underline"
-                        >الدراسه في الخارج</a
+                        >{{ __('general.dropdown_study_abroad') }}</a
                       >
                     </li>
                   </ul>
@@ -375,7 +375,7 @@
                   <a
                     href="{{route('blogs')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
-                    >المقالات</a
+                    >{{ __('general.nav_blogs') }}</a
                   >
                 </li>
 
@@ -383,7 +383,7 @@
                   <a
                     href="{{route('gallery')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
-                    >معرض الصور
+                    >{{ __('general.nav_gallery') }}
                   </a>
                 </li>
 
@@ -391,7 +391,7 @@
                   <a
                     href="{{route('contact-us')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
-                    >اتصل بنا
+                    >{{ __('general.nav_contact') }}
                   </a>
                 </li>
 
@@ -399,7 +399,7 @@
                   <a
                     href="{{route('admission-form')}}"
                     class="block py-2 px-4 capitalize md:py-0 text-white bg-active-color rounded-2xl"
-                    >الدراسة في الخارج
+                    >{{ __('general.nav_study_abroad') }}
                   </a>
                 </li>
               </ul>
@@ -424,23 +424,23 @@
               <ul class="flex flex-col p-4 pb-20 space-y-2 font-medium">
                 <li>
                   <a
-                    href="/ar/index.html"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas active"
-                    >الرئيسية</a
+                    href="{{ route('home') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('home') ? 'active' : '' }}"
+                    >{{ __('general.nav_home') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="./about-us/index.html"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas"
-                    >من نحن</a
+                    href="{{ route('about') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('about') ? 'active' : '' }}"
+                    >{{ __('general.nav_about') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/ar/services/index.html"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas"
-                    >خدماتنا</a
+                    href="{{ route('services') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('services') ? 'active' : '' }}"
+                    >{{ __('general.nav_services') }}</a
                   >
                 </li>
 
@@ -449,7 +449,7 @@
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                   >
-                    الدراسة في الخارج
+                    {{ __('general.nav_study_abroad') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -473,28 +473,28 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الامارات
+                        >{{ __('general.dropdown_study_uae') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الخارج
+                        >{{ __('general.dropdown_study_abroad') }}
                       </a>
                     </li>
                   </ul>
@@ -505,7 +505,7 @@
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                   >
-                    القطاعات التعليميه
+                    {{ __('general.nav_educational_sectors') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -529,28 +529,28 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الامارات
+                        >{{ __('general.dropdown_study_uae') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الخارج
+                        >{{ __('general.dropdown_study_abroad') }}
                       </a>
                     </li>
                   </ul>
@@ -561,7 +561,7 @@
                   <a
                     class="flex items-center pt-2 pb-3 px-2 md:p-0 text-primary-text-color rounded-sm"
                   >
-                    التعليم حسب الجنسية
+                    {{ __('general.nav_education_by_nationality') }}
                     <svg
                       class="w-2.5 h-2.5 ms-2.5"
                       aria-hidden="true"
@@ -585,59 +585,59 @@
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >نظرة عامة
+                        >{{ __('general.dropdown_overview') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في مصر
+                        >{{ __('general.dropdown_study_egypt') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الامارات
+                        >{{ __('general.dropdown_study_uae') }}
                       </a>
                     </li>
                     <li>
                       <a
                         href="{{route('subCategory')}}"
                         class="block text-alternate-text-color px-4 py-2.5 hover:text-primary-text-color hover:bg-white rounded-md transition-all duration-200 text-[14px] border-l-2 border-transparent hover:border-active-color"
-                        >الدراسه في الخارج
+                        >{{ __('general.dropdown_study_abroad') }}
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas"
-                    >المدونة</a
+                    href="{{ route('blogs') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('blogs') ? 'active' : '' }}"
+                    >{{ __('general.nav_blog') }}</a
                   >
                 </li>
 
                 <li>
                   <a
-                    href="#"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas"
-                    >معرض الصور</a
+                    href="{{ route('gallery') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('gallery') ? 'active' : '' }}"
+                    >{{ __('general.nav_gallery') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
-                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas"
-                    >اتصل بنا</a
+                    href="{{ route('contact-us') }}"
+                    class="block py-2 px-3 text-primary-text-color nav-link-underline-offcanvas {{ request()->routeIs('contact-us') ? 'active' : '' }}"
+                    >{{ __('general.nav_contact') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="{{ route('admission-form') }}"
                     class="block py-2 px-3 text-white bg-active-color rounded-2xl text-center nav-link-underline-offcanvas"
-                    >الدراسه في الخارج</a
+                    >{{ __('general.nav_study_abroad') }}</a
                   >
                 </li>
               </ul>

@@ -1,6 +1,7 @@
 @extends("layouts.master")
-@section('title', 'services')
 @section('content')
+@section('hero_title', __('services.title'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @push('styles')
  <style>
       /* Loading screen critical styles */
@@ -82,12 +83,11 @@
                  </figure>
                <h6
                  class="text-[#D0D0D0] text-center font-bold text-description pt-5 pb-3">
-                 قبولات جامعية
+                 {{ __('services.university_admissions') }}
                </h6>
                <p
                  class="text-alternate-text-color leading-10 text-center font-light">
-                 نقدم لك مجموعة متكاملة من الخدمات التعليمية المصممة خصيصاً
-                 لتناسب احتياجاتك الأكاديمية والمهنية
+                 {{ __('services.university_admissions_desc') }}
                </p>
              </div>
              @endfor
@@ -106,7 +106,7 @@
               decoding="async"
               class="absolute start-0 translate-x-[65%] w-10 h-10 ltr:-translate-x-[65%] translate-y-[-20%]"
             />
-            بعض المقالات الهامه
+            {{ __('home.blogs_title') }}
           </h6>
 
           <div class="container px-5 relative z-10">
@@ -147,8 +147,7 @@
               <span
                 class="block text-primary-text-color mb-2 font-light"
               >
-                المزيد ...</
-              >
+                {{ __('home.read_more') }}</span>
             </div>
           </a>
         </article>

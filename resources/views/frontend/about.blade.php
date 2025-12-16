@@ -1,11 +1,38 @@
 @extends("layouts.master")
-@section('title', 'Home')
+@section('hero_title', __('about.our_story_title'))
+@section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
+@push('styles')
+    <style>
+        .editor-ui ul {
+        color: var(--color-primary-text-color);
+      }
+      .editor-ui ul li {
+        padding-inline-start: 30px;
+        position: relative;
+      }
+      .editor-ui ul li::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 0;
+        top: 50%;
+        transform: translateY(-50%) scaleX(-1);
+        width: 25px;
+        height: 25px;
+        background-image: url("{{asset('assets/images/home/blogs/pin.svg')}}");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      html[dir="ltr"] .editor-ui ul li::before {
+        transform: translateY(-50%);
+      }
+    </style>
+@endpush
 @section('content')
     <section class="py-20 relative z-10">
         <div class="container px-5 relative z-20">
             <div class="content">
                 <div class="flex justify-start items-center gap-x-3 pb-4">
-                    <h2 class="main-title-ui pb-2 before:start-0!">من نحن</h2>
+                    <h2 class="main-title-ui pb-2 before:start-0!">{{ __('about.our_story_title') }}</h2>
                     <svg class="rotate-y-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="20" height="88" viewBox="0 0 20 88" role="presentation">
                         <image width="20" height="88"
@@ -19,29 +46,20 @@
                         <!-- Content will be injected here from backend/text editor -->
                         <!-- !this class width will be removed after the content is injected -->
                         <p class="leading-11">
-                            نخبة من الاستشاريين الأكاديميين و خبراء التعليم الدوليين
-                            المعتمدين، متخصصين في مجال خدمات التعليم الدولي و الدراسة في
-                            الخارج، التسويق التعليمي و تسويق البرامج التعليمية، إدارة
-                            القبولات الجامعية، و تأمين القبولات المعتمدة في الجامعات
-                            الموصى بها دوليا و المصنفة عالميا. و تعتبر إديوجيت من أهم
-                            الشركات التي ساهمت في دعم طلاب الوطن العربي و طلاب الخليج.
+                            {{ __('about.our_story_text') }}
                         </p>
                         <ul>
                             <li>
-                                استطاعنا مساعدة الاف الطلاب بتحقيق حلمهم بالدراسة في مختلف
-                                التخصصات
+                                {{ __('about.our_story_point') }}
                             </li>
                             <li>
-                                استطاعنا مساعدة الاف الطلاب بتحقيق حلمهم بالدراسة في مختلف
-                                التخصصات
+                                {{ __('about.our_story_point') }}
                             </li>
                             <li>
-                                استطاعنا مساعدة الاف الطلاب بتحقيق حلمهم بالدراسة في مختلف
-                                التخصصات
+                                {{ __('about.our_story_point') }}
                             </li>
                             <li>
-                                استطاعنا مساعدة الاف الطلاب بتحقيق حلمهم بالدراسة في مختلف
-                                التخصصات
+                                {{ __('about.our_story_point') }}
                             </li>
                         </ul>
                     </div>
@@ -64,16 +82,13 @@
                     <!-- Vision Section -->
                     <div class="mb-5">
                         <p class="main-sub-title mb-2 text-primary-text-color font-semibold px-5 text-justify">
-                            الرؤية
+                            {{ __('about.vision_title') }}
                         </p>
                         <!-- Content will be injected here from backend/text editor -->
                         <div id="vision-content"
                             class="main-description-ui p-5 lg:max-h-[170px] lg:overflow-y-auto bg-[#f0f2f4] shadow-md leading-8">
                             <p>
-                                نسعى لأن نكون المرجع الأول في مجال الاستشارات التعليمية
-                                الدولية، ونعمل على توفير حلول متكاملة تساعد الطلاب في تحقيق
-                                أهدافهم الأكاديمية والمهنية, بما يتوافق مع متطلبات السوق
-                                العالمي.
+                                {{ __('about.vision_text') }}
                             </p>
                         </div>
                     </div>
@@ -81,16 +96,13 @@
                     <!-- Mission Section -->
                     <div class="mb-5">
                         <p class="main-text-sub-title mb-2 text-primary-text-color font-semibold px-5 text-justify">
-                            الرسالة
+                            {{ __('about.mission_title') }}
                         </p>
                         <!-- Content will be injected here from backend/text editor -->
                         <div id="mission-content"
                             class="main-description-ui lg:max-h-[170px] lg:overflow-y-auto p-5 bg-[#f0f2f4] shadow-md leading-8">
                             <p>
-                                تقديم خدمات استشارية متميزة في مجال التعليم الدولي، ومساعدة
-                                الطلاب في اختيار البرامج الأكاديمية المناسبة لهم، وتسهيل
-                                إجراءات القبول في أفضل الجامعات العالمية, بما يتوافق مع
-                                متطلبات السوق العالمي.
+                                {{ __('about.mission_text') }}
                             </p>
                         </div>
                     </div>
@@ -129,10 +141,10 @@
                 <p
                   class="text-sub-title xl:text-[25px] 2xl:text-[30px] text-white font-bold"
                 >
-                  استكشف مستقبلك مع إديوجيت
+                  {{ __('about.cta_title') }}
                 </p>
                 <span class="text-description text-white">
-                  سجل اليوم لتدرس في الخارج
+                  {{ __('about.cta_subtitle') }}
                 </span>
               </div>
             </div>
@@ -171,7 +183,7 @@
         <section class="py-20 relative z-10">
           <div class="container px-5">
             <div class="text-center mb-12">
-              <h2 class="main-title-ui before:left-0 inline-block">شركاؤنا</h2>
+              <h2 class="main-title-ui before:left-0 inline-block">{{ __('about.partners_title') }}</h2>
             </div>
 
             <!-- Partners Slider -->
@@ -311,7 +323,7 @@
               decoding="async"
               class="absolute start-0 translate-x-[65%] w-10 h-10 ltr:-translate-x-[65%] translate-y-[-20%]"
             />
-            بعض المقالات الهامه
+            {{ __('home.blogs_title') }}
           </h6>
 
           <div class="container px-5 relative z-10">
@@ -352,8 +364,7 @@
               <span
                 class="block text-primary-text-color mb-2 font-light"
               >
-                المزيد ...</
-              >
+                {{ __('home.read_more') }}</span>
             </div>
           </a>
         </article>

@@ -40,39 +40,38 @@
             <!-- About Edugate -->
             <div class="about-edugate flex items-center">
               <p class="text-white mb-5 text-justify">
-                نعمل معا من أجل خلق فرص حقيقية و فعالة للطلاب لتلبية احتياجات
-                سوق العمل العربي و الخليجي و نركز على متطلبات سوق العمل الدولي
+                {{ __('general.footer_about_text') }}
               </p>
             </div>
 
             <!-- Important Links -->
             <div class="important-links">
-              <h2 class="text-white font-bold text-[25px] mb-5">روابط مهمة</h2>
+              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_important_links') }}</h2>
               <ul>
                 <li>
                   <a
-                    href="/ar/index.html"
+                    href="{{ route('home') }}"
                     class="block py-2 text-white hover:text-gray-200"
-                    >الرئيسية</a
+                    >{{ __('general.footer_home') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/ar/services/"
+                    href="{{ route('services') }}"
                     class="block py-2 text-white hover:text-gray-200"
-                    >خدماتنا</a
+                    >{{ __('general.footer_services') }}</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/ar/blogs/index.html"
+                    href="{{ route('blogs') }}"
                     class="block py-2 text-white hover:text-gray-200"
-                    >المقالات</a
+                    >{{ __('general.footer_blogs') }}</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >معرض الصور</a
+                  <a href="{{ route('gallery') }}" class="block py-2 text-white hover:text-gray-200"
+                    >{{ __('general.footer_gallery') }}</a
                   >
                 </li>
                 
@@ -81,21 +80,21 @@
 
             <!-- Information -->
             <div class="information">
-              <h2 class="text-white font-bold text-[25px] mb-5">معلومات</h2>
+              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_information') }}</h2>
               <ul>
                 <li>
-                  <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >ابدأ معنا</a
+                  <a href="{{ route('admission-form') }}" class="block py-2 text-white hover:text-gray-200"
+                    >{{ __('general.footer_start_with_us') }}</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ route('about') }}" class="block py-2 text-white hover:text-gray-200"
+                    >{{ __('general.footer_about_us') }}</a
                   >
                 </li>
                 <li>
                   <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >من نحن</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="block py-2 text-white hover:text-gray-200"
-                    >سياسة الخصوصية</a
+                    >{{ __('general.footer_privacy_policy') }}</a
                   >
                 </li>
               </ul>
@@ -103,7 +102,7 @@
 
             <!-- Contact Us -->
             <div class="contact-us">
-              <h2 class="text-white font-bold text-[25px] mb-5">تواصل معنا</h2>
+              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_contact_us') }}</h2>
               <div class="flex items-center mb-4">
                 <a
                   href="mailto:sales@edugateuae.com"
@@ -149,7 +148,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our tiktok page"
+                aria-label="{{ __('general.social_tiktok') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -167,7 +166,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our Twitter page"
+                aria-label="{{ __('general.social_twitter') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -185,7 +184,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our whatsapp page"
+                aria-label="{{ __('general.social_whatsapp') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -203,7 +202,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our linkedin page"
+                aria-label="{{ __('general.social_linkedin') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -221,7 +220,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our x page"
+                aria-label="{{ __('general.social_x') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -239,7 +238,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our instagram page"
+                aria-label="{{ __('general.social_instagram') }}"
                 class="fill-primary-text-color w-10 h-10 bg-white flex items-center justify-center rounded-[10px] line-clamp-4"
               >
                 <svg
@@ -257,7 +256,7 @@
             <li>
               <a
                 href="#"
-                aria-label="Visit our Facebook page"
+                aria-label="{{ __('general.social_facebook') }}"
                 class="fill-white"
               >
                 <svg
@@ -283,7 +282,7 @@
               target="_blank"
               class="text-white"
             >
-              © All Rights Reserved for
+              {{ __('general.footer_copyright_for') }}
             </a>
             <a href="https://digitalbondmena.com" target="_blank">
               <img
