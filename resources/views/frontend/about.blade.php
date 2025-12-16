@@ -116,7 +116,7 @@
             >
               <!-- Background Image -->
               <img
-                src="../../assets/images/about-us/layer-banner.webp"
+                src="{{asset('assets/images/about-us/layer-banner.webp')}}"
                 role="presentation"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -139,7 +139,7 @@
             <div class="absolute bottom-0 end-5 z-5" data-hide-mobile>
               <img
                 width="300"
-                src="../../assets/images/about-us/person.webp"
+                src="{{asset('assets/images/about-us/person.webp')}}"
                 loading="lazy"
                 decoding="async"
                 role="presentation"
@@ -182,7 +182,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 1"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -194,7 +194,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 2"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -206,7 +206,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 3"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -218,7 +218,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 4"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -230,7 +230,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 4"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -242,7 +242,7 @@
                   <div class="swiper-slide">
                     <div class="flex items-center justify-center p-6">
                       <img
-                        src="../../assets/images/about-us/partners.webp"
+                        src="{{asset('assets/images/about-us/partners.webp')}}"
                         alt="Partner 4"
                         class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
@@ -322,7 +322,7 @@
             <article
             class="blog [content-visibility:auto] group shadow-md rounded-[25px] overflow-hidden [contain-intrinsic-size:350px]"
           >
-          <a href="../blog-details/index.html" >
+          <a href="{{route('blog-detail', 'test')}}" >
             <div class="overflow-hidden w-full aspect-2/1 relative">
               <img
                 class="h-full group-hover:scale-110 duration-500 w-full object-cover"

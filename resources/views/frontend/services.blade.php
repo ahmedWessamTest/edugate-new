@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section('title', 'ourServices')
+@section('title', 'services')
 @section('content')
 @push('styles')
  <style>
@@ -76,7 +76,7 @@
                    <img
                      loading="lazy"
                      decoding="async"
-                     src="{{asset('../../assets/images/services/1.svg')}}"
+                     src="{{asset('assets/images/services/1.svg')}}"
                      alt="logo" width="150" 
                      />
                  </figure>
@@ -117,7 +117,7 @@
             <article
             class="blog [content-visibility:auto] group shadow-md rounded-[25px] overflow-hidden [contain-intrinsic-size:350px]"
           >
-          <a href="../blog-details/index.html" >
+          <a href="{{route('blog-detail', 'test')}}" >
             <div class="overflow-hidden w-full aspect-2/1 relative">
               <img
                 class="h-full group-hover:scale-110 duration-500 w-full object-cover"

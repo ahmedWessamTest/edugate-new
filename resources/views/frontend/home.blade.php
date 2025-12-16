@@ -5,10 +5,10 @@
   <div class="service relative overflow-hidden pt-5 pb-20 [content-visibility:auto]">
     <!-- Background image -->
     <img srcset="
-                  ../assets/images/home/services/600x250.webp   600w,
-                  ../assets/images/home/services/900x400.webp   900w,
-                  ../assets/images/home/services/1200x500.webp 1200w
-                " src="../assets/images/home/services/1200x500.webp"
+                  {{asset('assets/images/home/services/600x250.webp')}}   600w,
+                  {{asset('assets/images/home/services/900x400.webp')}}   900w,
+                  {{asset('assets/images/home/services/1200x500.webp')}} 1200w
+                " src="{{asset('assets/images/home/services/1200x500.webp')}}"
       sizes="(width <= 600px) 600px, (width >= 900px) 900px,(width >= 1200px) 1200px" width="1200" height="500"
       class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" role="presentation" />
 
@@ -17,7 +17,7 @@
         <div class="col-span-12 lg:col-span-8 flex justify-center items-center">
           <div class="content py-15 lg:py-0">
             <div class="relative w-fit">
-              <img src="../assets/images/home/services/decorative.svg" role="presentation"
+              <img src="{{asset('assets/images/home/services/decorative.svg')}}" role="presentation"
                 class="absolute top-0 start-0 -translate-y-full" loading="lazy" decoding="async" width="48" height="48" />
               <h3 class="main-title-ui">خدماتنا</h3>
             </div>
@@ -33,7 +33,7 @@
               <div class="swiper-slide service-slider">
                 <div class="item h-full flex flex-col justify-between">
                   <span>
-                    <img src="../assets/images/home/services/edu.svg" width="40" height="49" role="presentation"
+                    <img src="{{asset('assets/images/home/services/edu.svg')}}" width="40" height="49" role="presentation"
                       loading="lazy" decoding="async" class="h-[50]" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
@@ -51,7 +51,7 @@
               <div class="swiper-slide service-slider">
                 <div class="item h-full flex flex-col justify-between">
                   <span>
-                    <img src="../assets/images/home/services/qus.svg" class="w-10 py-2" role="presentation" width="40"
+                    <img src="{{asset('assets/images/home/services/qus.svg')}}" class="w-10 py-2" role="presentation" width="40"
                       height="56" loading="lazy" decoding="async" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
@@ -69,7 +69,7 @@
               <div class="swiper-slide service-slider">
                 <div class="item h-full flex flex-col justify-between">
                   <span>
-                    <img src="../assets/images/home/services/lang.svg" role="presentation" decoding="async" loading="lazy"
+                    <img src="{{asset('assets/images/home/services/lang.svg')}}" role="presentation" decoding="async" loading="lazy"
                       width="40" height="53" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
@@ -86,7 +86,7 @@
               <div class="swiper-slide service-slider">
                 <div class="item h-full flex flex-col justify-between">
                   <span>
-                    <img src="../assets/images/home/services/edu.svg" width="40" height="49" role="presentation"
+                    <img src="{{asset('assets/images/home/services/edu.svg')}}" width="40" height="49" role="presentation"
                       loading="lazy" decoding="async" />
                   </span>
                   <p class="text-primary-text-color text-sub-title font-medium mb-2 line-clamp-1">
@@ -262,7 +262,7 @@
           class="w-full lg:w-[600px] xl:w-[675px] bg-white rounded-[25px] shadow-lg pt-15 p-6 relative z-40 h-[80%] lg:translate-x-[90px] ltr:lg:-translate-x-[90px]">
           <!-- Paper clip icon -->
           <div class="absolute -top-4 left-[50%] translate-x-[-50%]">
-            <img src="../assets/images/home/testimonials/review.svg" role="presentation" loading="lazy" decoding="async"
+            <img src="{{asset('assets/images/home/testimonials/review.svg')}}" role="presentation" loading="lazy" decoding="async"
               width="72" height="49" />
           </div>
 

@@ -6,7 +6,7 @@
               class="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img
-                src="../assets/images/navbar/logo.png"
+                src="{{ asset('assets/images/navbar/logo.png') }}"
                 class="h-8"
                 alt="Edugate Logo"
                 width="100"
@@ -198,8 +198,8 @@
                 </li>
                 <li>
                   <a
-                    href="{{ route('ourServices') }}"
-                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('ourServices') ? 'active' : '' }}"
+                    href="{{ route('services') }}"
+                    class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline {{ request()->routeIs('services') ? 'active' : '' }}"
                     >خدماتنا</a
                   >
                 </li>
@@ -373,7 +373,7 @@
 
                 <li>
                   <a
-                    href="../ar/blogs/"
+                    href="{{route('blogs')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
                     >المقالات</a
                   >
@@ -381,7 +381,7 @@
 
                 <li>
                   <a
-                    href="../ar/gallery/index.html"
+                    href="{{route('gallery')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
                     >معرض الصور
                   </a>
@@ -389,7 +389,7 @@
 
                 <li>
                   <a
-                    href="./contact-us/index.html"
+                    href="{{route('contact-us')}}"
                     class="block py-2 px-3 md:p-0 text-primary-text-color rounded-sm nav-link-underline"
                     >اتصل بنا
                   </a>
@@ -397,7 +397,7 @@
 
                 <li>
                   <a
-                    href="./general-form/"
+                    href="{{route('admission-form')}}"
                     class="block py-2 px-4 capitalize md:py-0 text-white bg-active-color rounded-2xl"
                     >الدراسة في الخارج
                   </a>
@@ -414,7 +414,7 @@
                 class="flex items-center space-x-3 rtl:space-x-reverse m-4 py-4 sticky top-0 bg-white z-10 border-b border-gray-100"
               >
                 <img
-                  src="../assets/images/navbar/logo.png"
+                  src="{{ asset('assets/images/navbar/logo.png') }}"
                   class="h-8"
                   decoding="async"
                   alt="Edugate Logo"

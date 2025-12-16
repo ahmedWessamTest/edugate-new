@@ -130,6 +130,7 @@
     </button>
   </div>
   @include('layouts.scripts')
+  @stack('scripts')
 </body>
 
 
