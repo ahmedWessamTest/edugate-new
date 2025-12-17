@@ -70,11 +70,14 @@
       width: 50%;
       object-fit: cover;
     }
-
-    /* allow immediate scrolling/rendering — loading screen will still show but won't block layout */
-    body {
-      overflow: visible;
+    @media screen and (min-width:1280px) {
+    .xl\:flex {
+      display: flex;
     }
+  }
+  [dir="ltr"] .footer-dec {
+    text-align: center !important;
+  }
   </style>
   @stack('styles')
 </head>
@@ -106,9 +109,9 @@
   </div>
   <main class="relative z-10">
     <img src="{{asset('assets/images/home/2.svg')}}" role="presentation" height="7440" width="50%"
-      class="main-bg-image h-full w-1/2 object-cover -z-10" decoding="async" loading="lazy" />
+      class="main-bg-image h-full w-1/2 object-cover -z-10 ltr:-scale-x-[1]" decoding="async" loading="lazy" />
     @include('layouts.header')
-    @include('layouts.hero')
+      @include('layouts.hero')
     @yield('content')
   </main>
   @include('layouts.footer')

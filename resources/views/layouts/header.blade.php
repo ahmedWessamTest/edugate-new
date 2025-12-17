@@ -1,4 +1,4 @@
-<nav class="bg-transparent relative z-20">
+<nav class=" top-0 left-0 right-0 z-20 transition-all duration-300" style="z-index: 999;" id="mainNav">
         <div class="container">
           <div class="flex items-center justify-between mx-auto py-4">
             <a
@@ -76,6 +76,7 @@
               <!-- Dropdown Language -->
               <div
                 class="z-50 end-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dropdown-closed hidden"
+                style="z-index: 999;"
                 id="language-dropdown-menu"
               >
                 <ul class="py-2 font-medium" role="none">
@@ -144,7 +145,7 @@
               <button
                 type="button"
                 id="mobile-menu-btn"
-                class="inline-flex items-center p-2 w-10 h-10 bg-active-color justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 [@media(min-width:1250px)]:hidden"
+                class="inline-flex items-center p-2 w-10 h-10 bg-active-color justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 xl:hidden"
               >
                 <span class="sr-only">{{ __('general.aria_open_menu') }}</span>
                 <svg
@@ -165,7 +166,7 @@
             </div>
             <!-- NavBar In Desktop -->
             <div
-              class="items-center justify-between hidden [@media(min-width:1250px)]:flex md:order-1"
+              class="items-center justify-between hidden xl:flex md:order-1"
               id="navbar-items"
             >
               <ul

@@ -1924,5 +1924,10 @@
           />
         </div>
           </div>
+          <a
+            href="{{ route('blogs') }}"
+            class="text-white my-15 bg-active-color py-2 px-5 rounded-[35px] mx-auto block text-center w-fit">
+            عرض المزيد...
+          </a>
         </section>
 @endsection

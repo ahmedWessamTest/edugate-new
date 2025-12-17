@@ -1,5 +1,5 @@
  <footer
-        class="relative z-10 py-10 pt-14 [content-visibility:auto] [contain-intrinsic-size:885px]"
+        class="relative py-10 pt-14 [content-visibility:auto] [contain-intrinsic-size:885px]"
       >
         <!-- Footer Background Image -->
         <img
@@ -39,7 +39,7 @@
           >
             <!-- About Edugate -->
             <div class="about-edugate flex items-center">
-              <p class="text-white mb-5 text-justify">
+              <p class="text-white mb-5 text-justify footer-dec">
                 {{ __('general.footer_about_text') }}
               </p>
             </div>

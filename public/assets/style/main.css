@@ -10,6 +10,9 @@
 :root {
   --fa-font-display: swap;
 }
+html {
+  overflow-x: visible !important;
+}
 /* ==================== Language Dropdown Animations ==================== */
 #language-dropdown-menu {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,7 +102,12 @@ swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
-
+[dir="ltr"] .custom-scrollbar {
+  direction: rtl;
+}
+[dir="rtl"] .custom-scrollbar {
+  direction: ltr;
+}
 /* Offcanvas Menu Scrolling */
 #mobile-menu {
   scrollbar-width: thin;

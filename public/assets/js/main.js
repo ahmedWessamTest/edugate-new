@@ -262,92 +262,49 @@ class MobileMenuManager {
       });
   }
 }
-
-// ==================== NAVIGATION MANAGER ====================
-class NavigationManager {
+// ==================== SCROLL TRIGGER MANAGER ==================
+class ScrollNavbarManager {
   constructor() {
-    this.currentPath = window.location.pathname;
+    this.navbar = document.getElementById("mainNav");
+    this.isTicking = false;
+    this.lastScrollPosition = 0;
+    
+    if (this.navbar) {
+      // Store initial position
+      this.updateLastScrollPosition();
+      this.navbarListen();
+      // Apply initial state
+      this.updateNavbar();
+    }
   }
 
-  setActiveNavLink() {
-    const currentPageFolder = this.getCurrentPageFolder();
-    const navLinks = document.querySelectorAll(
-      "nav a[href], #mobile-menu a[href], .nav-link"
-    );
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active-link");
-      const linkPageFolder = this.getLinkPageFolder(link);
-
-      if (linkPageFolder === currentPageFolder) {
-        link.classList.add("active-link");
+  navbarListen() {
+    window.addEventListener("scroll", () => {
+      // Update last position
+      this.updateLastScrollPosition();
+      
+      if (!this.isTicking) {
+        window.requestAnimationFrame(() => {
+          this.updateNavbar();
+          this.isTicking = false;
+        });
+        this.isTicking = true;
       }
-    });
+    }, { passive: true });
   }
 
-  getCurrentPageFolder() {
-    const pathParts = this.currentPath.split("/").filter((part) => part !== "");
+  updateLastScrollPosition() {
+    this.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  }
 
-    if (pathParts.length >= 2) {
-      return pathParts[1]; // Gets "about-us", "contact", etc.
-    } else if (pathParts.length === 1) {
-      return "home";
+  updateNavbar() {
+    if (!this.navbar) return;
+    
+    if (this.lastScrollPosition >= 70) {
+      this.navbar.classList.add("bg-white","fixed");
+    } else {
+      this.navbar.classList.remove("bg-white","fixed");
     }
-
-    // Root path or index.html
-    if (
-      !pathParts.length ||
-      this.currentPath === "/" ||
-      (this.currentPath.endsWith("index.html") && pathParts.length <= 1)
-    ) {
-      return "home";
-    }
-
-    return pathParts[pathParts.length - 1] || "home";
-  }
-
-  getLinkPageFolder(link) {
-    const linkHref = link.getAttribute("href");
-    if (!linkHref) return "";
-
-    // Home page links
-    if (this.isHomeLink(linkHref)) {
-      return "home";
-    }
-
-    // Extract folder name from href
-    const hrefParts = linkHref
-      .split("/")
-      .filter(
-        (part) =>
-          part !== "" && part !== "." && part !== ".." && part !== "index.html"
-      );
-
-    if (!hrefParts.length) return "home";
-
-    const lastPart = hrefParts[hrefParts.length - 1];
-    return lastPart === "en" || lastPart === "ar"
-      ? hrefParts[hrefParts.length - 2] || "home"
-      : lastPart;
-  }
-
-  isHomeLink(linkHref) {
-    return (
-      linkHref === "/" ||
-      linkHref === "./index.html" ||
-      linkHref === "../index.html" ||
-      linkHref === "index.html" ||
-      linkHref.endsWith("/en/") ||
-      linkHref.endsWith("/ar/")
-    );
-  }
-
-  init() {
-    this.setActiveNavLink();
-    window.addEventListener("popstate", () => {
-      this.currentPath = window.location.pathname;
-      this.setActiveNavLink();
-    });
   }
 }
 
@@ -415,8 +372,8 @@ class App {
     // Initialize core components
     this.components.loadingManager = new LoadingScreenManager();
     this.components.floatingButtons = new FloatingButtonsManager();
-    this.components.navigation = new NavigationManager();
     // this.components.pageLoader = new PageSpecificLoader();
+    this.components.scrollNavbar = new ScrollNavbarManager();
 
     // Wait for DOM to be ready for interactive components
     if (document.readyState === "loading") {
@@ -440,9 +397,6 @@ class App {
 
     // Mobile menu
     this.components.mobileMenu = new MobileMenuManager();
-
-    // Navigation
-    this.components.navigation.init();
   }
 }
 

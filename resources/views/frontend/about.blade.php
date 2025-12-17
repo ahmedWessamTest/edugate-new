@@ -42,26 +42,28 @@
                 </div>
                 <div id="about-content"
                     class="main-description-ui text-start leading-11 editor-ui relative p-7 border-primary-text-color border-3 rounded-[35px] lg:pe-70">
-                    <div class="overflow-y-auto overflow-x-hidden pe-2" style="max-height: 460px;">
+                    <div class="overflow-y-auto overflow-x-hidden pe-2 custom-scrollbar" style="max-height: 460px;">
                         <!-- Content will be injected here from backend/text editor -->
                         <!-- !this class width will be removed after the content is injected -->
-                        <p class="leading-11">
-                            {{ __('about.our_story_text') }}
-                        </p>
-                        <ul>
-                            <li>
-                                {{ __('about.our_story_point') }}
-                            </li>
-                            <li>
-                                {{ __('about.our_story_point') }}
-                            </li>
-                            <li>
-                                {{ __('about.our_story_point') }}
-                            </li>
-                            <li>
-                                {{ __('about.our_story_point') }}
-                            </li>
-                        </ul>
+                         <div dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
+                           <p class="leading-11">
+                               {{ __('about.our_story_text') }}
+                           </p>
+                           <ul>
+                               <li>
+                                   {{ __('about.our_story_point') }}
+                               </li>
+                               <li>
+                                   {{ __('about.our_story_point') }}
+                               </li>
+                               <li>
+                                   {{ __('about.our_story_point') }}
+                               </li>
+                               <li>
+                                   {{ __('about.our_story_point') }}
+                               </li>
+                           </ul>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -160,6 +162,7 @@
           </div>
           <div
             class="img-bg absolute bottom-0 start-0 rtl:-scale-x-[1] translate-y-[50%]"
+            data-hide-mobile
           >
             <svg
               role="presentation"
@@ -386,6 +389,7 @@
           />
         </div>
           </div>
+          
         </section>
         <!-- ================== Start Footer ================== -->
        

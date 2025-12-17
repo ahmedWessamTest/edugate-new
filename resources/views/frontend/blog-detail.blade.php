@@ -2056,6 +2056,9 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"
     ></script>
-    <script defer src="{{asset('assets/js/form-validation.js')}}"></script>
-    <script defer src="{{asset('assets/js/blog-details.js')}}"></script>
+    <script>
+      const whatsappUrl = 'https://wa.me/YOUR_PHONE_NUMBER';
+    </script>
+    <script defer src="{{asset('assets/js/form-validation.js')}}" defer></script>
+    <script defer src="{{asset('assets/js/blog-details.js')}}" defer></script>
 @endpush

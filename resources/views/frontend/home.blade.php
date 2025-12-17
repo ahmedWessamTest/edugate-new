@@ -1,5 +1,6 @@
 @extends("layouts.master")
 @section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
+@section('hero_title', __('home.hero_title'))
 @section('content')
   <!-- ================== Our Services Section ================== -->
   <div class="service relative overflow-hidden pt-5 pb-20 [content-visibility:auto]">

@@ -3,16 +3,44 @@ function createContactBox() {
   const isEn = document.documentElement.dir !== "rtl"
   const contactDiv = document.createElement("div");
   contactDiv.innerHTML = isEn ? `
-    <div class="contact-box flex flex-col lg:flex-row text-center justify-between items-center mt-6 px-10 p-6 border border-main-green rounded-2xl">
-      <div>
-        <h5>You want to study abroad</h5>
-        <p class="text-lg text-main-text! font-medium">Contact an academic expert now</p>
-      </div>
-      <div class="mt-3 gap-2 flex items-center justify-center">
-        <a href="https://wa.me/201022810069" target="_blank" class="px-6 py-2 bg-main-green rounded-full text-main-white">WhatsApp</a>
-        <a href="tel:+201022810069" class="px-6 py-2 bg-main-text rounded-full text-main-white">Contact us</a>
-      </div>
-    </div>
+    <div class="md:px-0! relative container h-[300px] my-4">
+          <div class="relative mx-auto rounded-lg lg:rounded-[70px] overflow-hidden h-full px-10 pt-4 pb-10 flex items-center justify-center">
+            <!-- Background image -->
+            <img src="../../assets/images/home/Banner/1200x500.webp" srcset="
+                ../../assets/images/home/Banner/600x250.webp   600w,
+                ../../assets/images/home/Banner/900x400.webp   900w,
+                ../../assets/images/home/Banner/1200x500.webp 1200w
+              " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px" width="1200" height="500" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" role="presentation">
+
+            <!-- Overlay -->
+            <div class="custom-overlay"></div>
+
+            <!-- Content -->
+            <div class="content relative z-10 flex flex-col h-full w-full">
+              <!-- Centered Text -->
+              <div class="top flex-1 flex flex-col justify-center items-center text-center">
+                <p class="text-[25px]! font-medium! text-white!">
+                  Ready to take the first step toward enrollment
+                </p>
+                <p class=" text-white!">
+                  in the best accredited universities
+                </p>
+              </div>
+
+              <!-- Bottom Line -->
+              <div class="line mb-1 text-start">
+                <p class="text-white! font-light!">
+                  Contact us now to schedule a consultation and learn more about us
+                </p>
+              </div>
+              <div class="flex items-center justify-center gap-2 text-white">
+                <div class="grow h-px bg-white"></div>
+                <a  href="${whatsappUrl}" class="w-fit px-2 whitespace-nowrap font-light">Start with us now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
   ` :
   `
         <div class="md:px-0! relative container h-[300px] my-4">
@@ -47,7 +75,7 @@ function createContactBox() {
               </div>
               <div class="flex items-center justify-center gap-2 text-white">
                 <div class="grow h-px bg-white"></div>
-                <span class="w-fit px-2 whitespace-nowrap font-light">ابدا معنا الان</span>
+                <a href="${whatsappUrl}" class="w-fit px-2 whitespace-nowrap font-light">ابدا معنا الان</a>
               </div>
             </div>
           </div>
@@ -71,7 +99,6 @@ function generateTableOfContents() {
     con.innerHTML = "";
   
     const headings = container.querySelectorAll("h2");
-    console.log(headings);
     
     headings.forEach((heading,index) => {
       const id = generateRandomId();

@@ -15,6 +15,9 @@
   font-size: 1.3375rem;
   margin-top:10px
 }
+.article-content h2 {
+  color:var(--color-primary-text-color);
+}
 .article-content h3 {
   color:black;
   font-size: 1.1375rem;
