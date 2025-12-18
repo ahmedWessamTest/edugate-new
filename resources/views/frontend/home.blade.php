@@ -338,7 +338,7 @@
           <!-- Background image -->
           <img src="{{asset('assets/images/home/testimonials/1200x500.webp')}}" srcset="
                     {{asset('assets/images/home/testimonials/600x250.webp')}}   600w,
-                    {{asset('assets/images/home/testimonials/900x400.webp')}}   900w,
+                    {{asset('assets/images/home/testimonials/900x4f00.webp')}}   900w,
                     {{asset('assets/images/home/testimonials/1200x500.webp')}} 1200w
                   " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px" width="1200" height="500"
             class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" role="presentation" />
