@@ -22,6 +22,7 @@
                 data-dropdown-toggle="language-dropdown-menu"
                 aria-label="{{ __('general.aria_change_language') }}"
                 class="font-medium py-2 text-sm text-primary-text-color cursor-pointer block"
+                style="margin-bottom: 4px;"
               >
                 <!-- Flag Icon -->
                 {{app()->getLocale() == 'ar' ? 'Ar':'En'}}

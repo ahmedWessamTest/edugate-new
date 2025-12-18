@@ -36,7 +36,7 @@
                   </h1>
                </div>
                @if (request()->routeIs('home')) 
-               <div class="custom-scrollbar ps-3 lg:max-w-[600px] max-h-[100px] overflow-y-auto mb-5">
+               <div class="custom-scrollbar lg:max-w-[600px] max-h-[100px] overflow-y-auto mb-5">
                   <p
                   dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"
                      class="text-white leading-8 text-center lg:text-start font-medium w-full ">
@@ -94,12 +94,10 @@
                   <img src="{{asset('assets/images/home/about/about-us.svg')}}" alt="about us" loading="lazy" width="20"
                      height="88" />
                </div>
-               <div class="overflow-y-auto custom-scrollbar px-3" style="max-height: 240px; margin-inline-start: 20px;">
-                  <div class="main-description-ui pb-4 lg:pb-0 " dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
+                  <div class="main-description-ui pb-4 text-start lg:pb-0 overflow-y-auto custom-scrollbar px-3 " style="max-height: 240px;">
                      {{ __('about.our_story_text') }}
                      {{ __('about.our_story_text') }}
                   </div>
-               </div>
             </div>
             <figure>
                <img class="w-full h-full object-cover" loading="lazy" decoding="async"

@@ -39,7 +39,7 @@
           >
             <!-- About Edugate -->
             <div class="about-edugate flex items-center">
-              <p class="text-white mb-5 text-justify footer-dec">
+              <p class="text-white mb-5 footer-dec">
                 {{ __('general.footer_about_text') }}
               </p>
             </div>

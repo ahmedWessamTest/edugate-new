@@ -102,12 +102,7 @@ swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
-[dir="ltr"] .custom-scrollbar {
-  direction: rtl;
-}
-[dir="rtl"] .custom-scrollbar {
-  direction: ltr;
-}
+
 /* Offcanvas Menu Scrolling */
 #mobile-menu {
   scrollbar-width: thin;
@@ -581,9 +576,6 @@ swiper-slide img {
     .xl\:flex {
       display: flex;
     }
-  }
-  [dir="ltr"] .footer-dec {
-    text-align: center !important;
   }
   @media screen and (min-width:1024px) {
       .lg\:mx-0 {

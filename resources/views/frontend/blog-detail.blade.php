@@ -8,6 +8,96 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"
     />
+    <style>
+  /* Button Container */
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    /* flex-wrap: wrap; */
+  }
+
+  /* Base Button Style */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  /* WhatsApp Button */
+  
+
+ 
+
+  /* Call Now Button */
+  .call-btn {
+     background-color: white; /* Active color from theme */
+    color: white;
+  }
+
+  .call-btn:hover {
+    background-color: #e53e42;
+    color: white;
+  }
+  /* whatsapp Now Button */
+  .whatsapp {
+    background-color: white;
+  }
+
+  /* Button Icon */
+  .btn-icon {
+    margin-inline-end: 8px;
+    font-size: 16px;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .buttons-container {
+      /* flex-direction: column; */
+      gap: 12px;
+      width: 100%;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 10px 20px;
+    }
+    
+    .content {
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn {
+      font-size: 13px;
+      padding: 10px 16px;
+    }
+  }
+</style>
 @endpush
 @section('content')
 <section class="pb-[100px] pt-[100px] relative">

@@ -89,7 +89,7 @@
               id="phone"
               name="phone"
               placeholder="{{ __('contact.phone_placeholder') }}"
-              class="main-input text-end"
+              class="main-input"
             />
             <input type="tel" class="hidden" readonly id="actualPhone" />
           </div>

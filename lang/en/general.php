@@ -14,7 +14,7 @@ return [
     'nav_blog' => 'Blog',
     'nav_blogs' => 'Articles',
     'nav_gallery' => 'Gallery',
-    'nav_contact' => 'Contact',
+    'nav_contact' => 'Contact Us',
     'nav_login' => 'Login',
     'nav_register' => 'Register',
     'nav_dashboard' => 'Dashboard',
