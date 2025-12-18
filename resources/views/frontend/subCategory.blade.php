@@ -5,9 +5,16 @@
 @section('content')
 @push('styles')
 <link rel="stylesheet" href="{{asset('assets/style/syb-category-editor.css')}}">
+<style>
+  .sub-category {
+    @media screen and (min-width: 1024px) {
+      padding-top: 11.25rem !important;
+    }
+  }
+</style>
 @endpush
 <!-- ==================  Subcategory Section ================== -->
-      <section class="sub-category pt-[180px] pb-[100px]">
+      <section class="sub-category pt-8 pb-[100px]">
         <div class="container">
           <!-- 
             you will use this div to inject the content of the sub category,
@@ -1860,6 +1867,7 @@
               loading="lazy"
               decoding="async"
               class="absolute start-0 translate-x-[65%] w-10 h-10 ltr:-translate-x-[65%] translate-y-[-20%]"
+              data-hide-mobile
             />
             {{ __('blog.important_articles') }}
           </h6>

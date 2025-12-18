@@ -3,18 +3,31 @@ const initGalleryImagesSwiper = () => {
   const gallerySwiper = document.querySelector(".gallery-swiper-btn");
   if(!gallerySwiper) return;
   requestAnimationFrame(()=>{
-      new Swiper(".gallery-swiper", {
-        slidesPerView: 1,
-        loop: true,
-        speed: 600,
-        observer:true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true,   
-          dynamicMainBullets: 3, 
-        }
+      const swiper = new Swiper(".gallery-swiper", {
+  slidesPerView: 1,
+  loop: true,
+  speed: 600,
+  observer: true,
+  observeParents: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 3,
+  },
+
+  on: {
+    init(swiper) {
+      requestAnimationFrame(() => {
+        swiper.update();
+        swiper.pagination.render();
+        swiper.pagination.update();
       });
+    },
+  },
+});
+
   })
 };
 
@@ -24,9 +37,10 @@ function initSwiperBtnGallery() {
   requestAnimationFrame(() => {
       new Swiper(".gallery-swiper-btn", {
         slidesPerView: 1,
+        spaceBetween: 16,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".next-btn",
+          prevEl: ".prev-btn",
         },
         breakpoints: {
           640: { slidesPerView: 2 },

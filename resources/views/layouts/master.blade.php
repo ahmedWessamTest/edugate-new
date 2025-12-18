@@ -70,13 +70,9 @@
       width: 50%;
       object-fit: cover;
     }
-    @media screen and (min-width:1280px) {
-    .xl\:flex {
-      display: flex;
-    }
-  }
-  [dir="ltr"] .footer-dec {
-    text-align: center !important;
+    
+  body {
+    height: auto;
   }
   </style>
   @stack('styles')

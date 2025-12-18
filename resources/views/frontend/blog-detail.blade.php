@@ -24,11 +24,6 @@
                 />
               </figure>
               <div
-                  class="top-24 tableOfContents xl:hidden overflow-y-auto mb-5 bg-white/60 backdrop-blur-md border-s-4 border-main-green rounded-2xl shadow-md p-5 transition-all duration-300 hover:shadow-lg"
-                >
-                <h3 class="text-primary-text-color font-bold mb-4 text-lg tracking-wide border-b pb-2 border-gray-200">محتوي الصفحه</h3>
-                <ul class="space-y-2 text-sm text-alternate-text-color overflow-y-auto max-h-[300px] custom-scrollbar"></ul></div>
-              <div
                 class="flex justify-between items-center gap-y-3 w-[300px] mt-6 py-5"
               >
                 <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
@@ -38,6 +33,15 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
               </div>
+              <div
+                  class="top-24 tableOfContents xl:hidden overflow-y-auto mb-5 bg-white/60 backdrop-blur-md border-s-4 border-main-green rounded-2xl shadow-md p-5 transition-all duration-300 hover:shadow-lg"
+                >
+                <h3 class="text-primary-text-color font-bold mb-4 text-lg tracking-wide border-b pb-2 border-gray-200">محتوي الصفحه</h3>
+                <div class="custom-scrollbar max-h-[300px] ps-3 overflow-y-auto">
+                  <ul class="space-y-2 text-sm text-alternate-text-color " dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"></ul>
+                </div>
+              </div>
+              
               <!-- TextEditorData from the database -->
               <div id="articleContainer" class="article-content">
                 <p dir="rtl">
@@ -1881,7 +1885,9 @@
                   class="top-24 tableOfContents hidden xl:block overflow-y-auto mb-5 bg-white/60 backdrop-blur-md border-s-4 border-main-green rounded-2xl shadow-md p-5 transition-all duration-300 hover:shadow-lg"
                 >
                 <h3 class="text-primary-text-color font-bold mb-4 text-lg tracking-wide border-b pb-2 border-gray-200">{{ __('blog.table_of_contents') }}</h3>
-                <ul class="space-y-2 text-sm text-alternate-text-color overflow-y-auto max-h-[300px] custom-scrollbar"></ul></div>
+                <div class="overflow-y-auto max-h-[300px] custom-scrollbar ps-3">
+                  <ul class="space-y-2 text-sm text-alternate-text-color" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"></ul></div>
+                </div>
                 <form
                   data-validate="true"
                   class="border-2 border-primary-text-color/20 rounded-[50px] p-8 lg:p-10 bg-white shadow-sm"

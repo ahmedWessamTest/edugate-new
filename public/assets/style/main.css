@@ -567,3 +567,36 @@ swiper-slide img {
     transform: translateY(0);
   }
 }
+.md\:justify-end {
+  @media screen and (min-width:768px) {
+    justify-content: end;
+  }
+}
+.md\:justify-start {
+  @media screen and (min-width:768px) {
+    justify-content: start;
+  }
+}
+@media screen and (min-width:1280px) {
+    .xl\:flex {
+      display: flex;
+    }
+  }
+  [dir="ltr"] .footer-dec {
+    text-align: center !important;
+  }
+  @media screen and (min-width:1024px) {
+      .lg\:mx-0 {
+        margin-inline: 0;
+      }
+    }
+
+.footer-logo {
+  width: fit-content;
+  @media screen and (min-width:768px){
+    width: 300px;
+  }
+}
+.main-title-ui::before {
+      inset-inline-start: 0 !important;
+    }

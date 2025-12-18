@@ -93,9 +93,9 @@
 html[dir="rtl"] .dynamic-inputs-container:not(:has(> div:not(.hidden)))::after {
   content: "لا توجد حقول متاحة";
 }
+
   .main-title-ui {
     @apply text-main-title w-fit font-bold text-primary-text-color relative mb-5;
-
     &::before {
       content: "";
       position: absolute;

@@ -16,7 +16,7 @@
           decoding="async"
         />
         <div
-          class="bg-white text-end p-3 rounded-e-full relative w-full mb-6 md:mb-0 max-w-[300px] z-10 start-0 py-3"
+          class="bg-white text-end p-3 rounded-e-full relative w-full mb-6 md:mb-0 footer-logo z-10 start-0 py-3"
         >
           <img
             src="{{asset('assets/images/navbar/logo.png')}}"
@@ -46,7 +46,7 @@
 
             <!-- Important Links -->
             <div class="important-links">
-              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_important_links') }}</h2>
+              <h2 class="text-white text-[25px] mb-5">{{ __('general.footer_important_links') }}</h2>
               <ul>
                 <li>
                   <a
@@ -80,7 +80,7 @@
 
             <!-- Information -->
             <div class="information">
-              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_information') }}</h2>
+              <h2 class="text-white  text-[25px] mb-5">{{ __('general.footer_information') }}</h2>
               <ul>
                 <li>
                   <a href="{{ route('admission-form') }}" class="block py-2 text-white hover:text-gray-200"
@@ -102,8 +102,8 @@
 
             <!-- Contact Us -->
             <div class="contact-us">
-              <h2 class="text-white font-bold text-[25px] mb-5">{{ __('general.footer_contact_us') }}</h2>
-              <div class="flex items-center mb-4">
+              <h2 class="text-white  text-[25px] mb-5">{{ __('general.footer_contact_us') }}</h2>
+              <div class="flex items-center justify-center md:justify-start mb-4">
                 <a
                   href="mailto:sales@edugateuae.com"
                   class="flex items-center text-white hover:text-gray-200"
@@ -121,7 +121,7 @@
                   sales@edugateuae.com
                 </a>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center md:justify-start justify-center">
                 <a
                   href="tel:0123456789"
                   class="flex items-center text-white hover:text-gray-200"
@@ -144,7 +144,7 @@
           </div>
 
           <!-- Social Media Icons -->
-          <ul class="flex space-x-4 relative z-10 py-8 justify-end">
+          <ul class="flex space-x-4 relative z-10 py-8 justify-center md:justify-end ">
             <li>
               <a
                 href="#"

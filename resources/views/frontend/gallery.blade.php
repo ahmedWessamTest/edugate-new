@@ -2,6 +2,76 @@
 @section('hero_title', __('gallery.winter_exhibitions'))
 @section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('content')
+@push('styles')
+<style>
+  .gallery-swiper-btn .swiper-wrapper {
+  align-items: stretch;
+}
+.gallery-swiper-btn .swiper-slide {
+  height: auto;
+  display: flex;
+}
+.gallery-swiper-btn .swiper-slide > * {
+  flex: 1;
+}
+
+  .swiper-pagination {
+        position: static;
+        margin-top: .9375rem !important;
+        margin:auto;
+        transform: translate(0) !important;
+        .swiper-pagination-bullet {
+          background-color: transparent;
+          border:3px solid #e4e4e4;
+          height: 25px;
+          width: 40px;
+          border-radius: 999px;
+          opacity: 1;
+          &.swiper-pagination-bullet-active{
+            background-color: #e4e4e4;
+          }
+        }
+      }
+      .next-btn,.prev-btn {
+        position: absolute;
+        top: 50%;
+        button {
+          cursor: pointer;
+        }
+        z-index: 100;
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+        &.swiper-button-disabled svg path {
+          stroke: gray !important;
+        }
+        
+      }
+      .next-btn {
+        inset-inline-end: -30px;
+        @media screen and (min-width:1024px) {
+          inset-inline-end: -50px;
+        }
+       [dir="ltr"] & {
+          transform: ;
+          transform: translateY(-50%) scaleX(-1);
+        }
+        transform: translateY(-50%);
+      }
+      .prev-btn {
+        inset-inline-start: -30px;
+        @media screen and (min-width:1024px) {
+          inset-inline-start: -50px;
+        }
+        [dir="rtl"] & {
+          transform: ;
+          transform: translateY(-50%) scaleX(-1);
+        }
+        transform: translateY(-50%);
+      }
+</style>
+@endpush
 <section class="pb-44 pt-8 relative z-10">
         <!-- Slider main container -->
         <!-- ✅ Swiper Wrapper -->
@@ -52,17 +122,16 @@
             </div>
 
             <!-- ✅ Nav Buttons -->
-             <div class="swiper-button-next" style="--swiper-navigation-sides-offset:-30px">
+             <div class="next-btn">
                <button
                  aria-label="Next Partner"
                  id="partners-next"
-                 
-                 class=" absolute flex items-center justify-center top-1.5 -end-5! z-10 fill-primary-text-color text-white! rounded-full hover:bg-opacity-90 transition-all duration-300 cursor-pointer ltr:rotate-180"
                >
                  <svg
-                   viewBox="0 0 30 30"
-                   fill="none"
-                   width="45"
+                   viewBox="0 0 24 24"
+                   style="fill: transparent;"
+                   width="24"
+                   height="24"
                    xmlns="http://www.w3.org/2000/svg"
                  >
                    <path
@@ -75,17 +144,17 @@
                  </svg>
                </button>
              </div>
-             <div class="swiper-button-prev" style="--swiper-navigation-sides-offset:-30px">
+             <div class=" prev-btn">
                <button
-               
+               style="--swiper-navigation-top-offset:100px"
                  aria-label="Previous Partner"
                  id="partners-prev"
-                 class=" z-10 fill-primary-text-color text-white! rounded-full hover:bg-opacity-90 transition-all duration-300 cursor-pointer rotate-180"
                >
                  <svg
-                   viewBox="0 0 30 30"
-                   fill="none"
-                   width="45"
+                   viewBox="0 0 24 24"
+                   style="fill: transparent;"
+                   width="24"
+                   height="24"
                    xmlns="http://www.w3.org/2000/svg"
                  >
                    <path
@@ -103,7 +172,7 @@
 
 
         <!-- ✅ مكان عرض المحتوى -->
-        <div class="container relative pt-32">
+        <div class="container relative pt-16">
           <div
             id="tab-content-area"
             class="px-5 rounded-lg min-h-[500px]"
@@ -193,7 +262,9 @@
 
               <!-- Pagination Dots -->
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="pagination-container">
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
 
           <div id="internationalExhibitions">
@@ -258,6 +329,5 @@
         "undefined" != typeof exports ? (exports.loadCSS = t) : (e.loadCSS = t);
       })("undefined" != typeof global ? global : this);
     </script>
-    <script defer src="{{asset('vendors/swiper/swiper-bundle.min.js')}}"></script>
     <script defer src="{{asset('assets/js/initswipper-gallery.js')}}"></script>
 @endpush

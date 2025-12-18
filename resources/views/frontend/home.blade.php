@@ -2,6 +2,25 @@
 @section('hero_image', asset('assets/images/home/hero/hero-1600.jpg'))
 @section('hero_title', __('home.hero_title'))
 @section('content')
+@push('styles')
+<style>
+  .navigation-container {
+    position: absolute;
+    inset-inline-start: 25px;
+    bottom: 30px;
+    z-index: 20;
+    [dir="rtl"] & button {
+      transform: scaleX(-1);
+    }
+  }
+  .testimonial-container {
+    flex-direction: column-reverse;
+    @media screen and (min-width:1024px) {
+      flex-direction: row-reverse
+    }
+  }
+</style>
+@endpush
   <!-- ================== Our Services Section ================== -->
   <div class="service relative overflow-hidden pt-5 pb-20 [content-visibility:auto]">
     <!-- Background image -->
@@ -16,7 +35,7 @@
     <div class="container relative z-10">
       <div class="grid grid-cols-12 gap-y-3">
         <div class="col-span-12 lg:col-span-8 flex justify-center items-center">
-          <div class="content py-15 lg:py-0">
+          <div class="content py-8 lg:py-0">
             <div class="relative w-fit">
               <img src="{{asset('assets/images/home/services/decorative.svg')}}" role="presentation"
                 class="absolute top-0 start-0 -translate-y-full" loading="lazy" decoding="async" width="48" height="48" />
@@ -212,7 +231,7 @@
           <div class="content">
             <h4 class="main-title-ui before:hidden">{{ __('home.why_us_title') }}</h4>
             <p
-              class="text-description main-title-ui before:w-[25%] before:rounded-2xl w-fit text-alternate-text-color pb-3">
+              class="text-description reverse-line main-title-ui before:w-[25%] before:rounded-2xl w-fit text-alternate-text-color pb-3">
               {{ __('home.why_us_subtitle') }}
             </p>
           </div>
@@ -251,7 +270,7 @@
   <!-- Testimonials Section -->
   <section class="py-20 relative overflow-hidden">
     <div class="px-5 lg:px-0 h-full">
-      <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-0 items-center justify-end">
+      <div class="flex  gap-8 lg:gap-0 items-center justify-end testimonial-container">
         <!-- Testimonial Slider (Light Card) -->
         <div
           class="w-full lg:w-[600px] xl:w-[675px] bg-white rounded-[25px] shadow-lg pt-15 p-6 relative z-40 h-[80%] lg:translate-x-[90px] ltr:lg:-translate-x-[90px]">
@@ -297,16 +316,16 @@
             </div>
           </div>
           <!-- Navigation buttons -->
-          <div class="flex justify-between mt-4">
-            <button id="testimonial-next" class="cursor-pointer ltr:order-1" aria-label="Next testimonial">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L16 12L9 19" stroke="#1CB280" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
+          <div class="flex justify-between mt-4 navigation-container">
             <button id="testimonial-prev" class="cursor-pointer" aria-label="Previous testimonial">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 19L8 12L15 5" stroke="#1CB280" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button id="testimonial-next" class="cursor-pointer" aria-label="Next testimonial">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L16 12L9 19" stroke="#1CB280" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
             </button>

@@ -25,6 +25,11 @@
       html[dir="ltr"] .editor-ui ul li::before {
         transform: translateY(-50%);
       }
+      .above-section {
+        @media screen and (min-width:1024px) {
+          transform: translateY(150px) 
+        }
+      }
     </style>
 @endpush
 @section('content')
@@ -121,7 +126,7 @@
         </div>
     </section>
     <!-- group the above section to avoid repeated the translate y value -->
-      <div class="translate-y-[150px] relative z-20">
+      <div class="above-section relative z-20">
         <!-- ================== CTA Section ================== -->
         <section class="relative py-20 z-20">
           <div class="container relative">

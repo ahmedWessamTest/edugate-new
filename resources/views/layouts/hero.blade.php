@@ -36,16 +36,19 @@
                   </h1>
                </div>
                @if (request()->routeIs('home')) 
-               <p
-                  class="text-white max-h-[100px] custom-scrollbar overflow-y-auto mb-5 leading-8 text-center lg:text-start font-medium w-full lg:max-w-[600px]">
-                  {{ __('home.hero_description') }}
-               </p>
-               <div class="flex items-center justify-center lg:justify-start gap-x-3 mt-4">
+               <div class="custom-scrollbar ps-3 lg:max-w-[600px] max-h-[100px] overflow-y-auto mb-5">
+                  <p
+                  dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}"
+                     class="text-white leading-8 text-center lg:text-start font-medium w-full ">
+                     {{ __('home.hero_description') }}
+                  </p>
+               </div>
+               <div class="flex items-center justify-center lg:justify-start gap-x-3 mt-4 relative w-fit mx-auto lg:mx-0">
                   <a href="{{route('contact-us')}}" class="bg-white text-primary-text-color py-1 px-1.5 rounded-[25px]">
                   {{ __('home.hero_cta') }}
                   </a>
                   <img src="{{asset('assets/images/home/hero/arrow.svg')}}" decoding="async" width="60" height="20"
-                     class="ltr:-scale-x-[1]" role="presentation" />
+                     class="ltr:-scale-x-[1] absolute" style="inset-inline-start:101%;" role="presentation" />
                </div>
                <!-- convert to dictionary -->
                @else 
@@ -91,8 +94,11 @@
                   <img src="{{asset('assets/images/home/about/about-us.svg')}}" alt="about us" loading="lazy" width="20"
                      height="88" />
                </div>
-               <div class="main-description-ui pb-4 lg:pb-0 overflow-y-auto custom-scrollbar pe-1" style="max-height: 240px">
-                  {{ __('about.our_story_text') }}
+               <div class="overflow-y-auto custom-scrollbar px-3" style="max-height: 240px; margin-inline-start: 20px;">
+                  <div class="main-description-ui pb-4 lg:pb-0 " dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
+                     {{ __('about.our_story_text') }}
+                     {{ __('about.our_story_text') }}
+                  </div>
                </div>
             </div>
             <figure>
