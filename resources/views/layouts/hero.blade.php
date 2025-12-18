@@ -94,7 +94,7 @@
                   <img src="{{asset('assets/images/home/about/about-us.svg')}}" alt="about us" loading="lazy" width="20"
                      height="88" />
                </div>
-                  <div class="main-description-ui pb-4 text-start lg:pb-0 overflow-y-auto custom-scrollbar px-3 " style="max-height: 240px;">
+                  <div class="main-description-ui mb-4 text-start lg:mb-0 overflow-y-auto custom-scrollbar px-3  " style="max-height: 240px;">
                      {{ __('about.our_story_text') }}
                      {{ __('about.our_story_text') }}
                   </div>

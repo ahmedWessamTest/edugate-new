@@ -30,7 +30,9 @@
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
-    min-width: 180px;
+    @media screen and (min-width:1024px) {
+      min-width: 180px;
+    }
     text-align: center;
     border: none;
     cursor: pointer;
@@ -83,7 +85,7 @@
     .btn {
       width: 100%;
       max-width: 280px;
-      padding: 10px 20px;
+      padding: 10px 15px;
     }
     
     .content {
@@ -94,7 +96,7 @@
   @media (max-width: 480px) {
     .btn {
       font-size: 13px;
-      padding: 10px 16px;
+      padding: 10px 5px;
     }
   }
 </style>
@@ -1970,7 +1972,7 @@
             </div>
             <!-- Form -->
             <div class="relative col-span-12 xl:col-span-5">
-              <div class="sticky top-8" id="tableOfContent">
+              <div class="sticky" style="top:75px" id="tableOfContent">
                 <div
                   class="top-24 tableOfContents hidden xl:block overflow-y-auto mb-5 bg-white/60 backdrop-blur-md border-s-4 border-main-green rounded-2xl shadow-md p-5 transition-all duration-300 hover:shadow-lg"
                 >
@@ -2154,6 +2156,7 @@
     ></script>
     <script>
       const whatsappUrl = 'https://wa.me/YOUR_PHONE_NUMBER';
+      const phoneNumber = "{{ route('contact-us') }}";
     </script>
     <script defer src="{{asset('assets/js/form-validation.js')}}" defer></script>
     <script defer src="{{asset('assets/js/blog-details.js')}}" defer></script>

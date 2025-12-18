@@ -37,7 +37,7 @@
         <div class="col-span-12 lg:col-span-8 flex justify-center items-center">
           <div class="content py-8 lg:py-0">
             <div class="relative w-fit">
-              <img src="{{asset('assets/images/home/services/decorative.svg')}}" role="presentation"
+              <img data-hide-mobile src="{{asset('assets/images/home/services/decorative.svg')}}" role="presentation"
                 class="absolute top-0 start-0 -translate-y-full" loading="lazy" decoding="async" width="48" height="48" />
               <h3 class="main-title-ui">{{ __('home.services_title') }}</h3>
             </div>
@@ -349,7 +349,7 @@
           <!-- Content -->
           <div class="relative z-20 px-5 py-15 md:ps-15 md:pe-25 h-full flex flex-col justify-center">
             <h5 class="text-white main-title-ui before:bg-white">{{ __('home.testimonials_title') }}</h5>
-            <p class="text-white mb-6 text-description text-justify lg:max-h-[210px] lg:overflow-y-auto">
+            <p class="text-white mb-6 text-description lg:max-h-[210px] lg:overflow-y-auto">
               {{ __('home.testimonials_desc') }}
             </p>
           </div>
